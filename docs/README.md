@@ -41,14 +41,17 @@ identifiers is shown below.
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH></TR>
 <TBODY>
+    <TR><TD>accm<TD>accumulator</TR>
     <TR><TD>ahu<TD>air handling unit</TR>
-    <TR><TD>cmp<TD>compressor</TR>
-    <TR><TD>ihx<TD>indoor heat exchanger</TR>
-    <TR><TD>ohx<TD>outdoor heat exchanger</TR>
+    <TR><TD>comp<TD>compressor</TR>
     <TR><TD>idf<TD>indoor fan</TR>
-    <TR><TD>odf<TD>outdoor fan</TR>
-    <TR><TD>exv<TD>expansion valve</TR>
+    <TR><TD>idhx<TD>indoor heat exchanger</TR>
+    <TR><TD>ithx<TD>internal heat exchanger</TR>
     <TR><TD>oae<TD>outdoor-air economizer</TR>
+    <TR><TD>odf<TD>outdoor fan</TR>
+    <TR><TD>odhx<TD>outdoor heat exchanger</TR>
+    <TR><TD>vfd<TD>variable frequency drive</TR>
+    <TR><TD>xv<TD>expansion valve</TR>
 </TABLE>
 
 
@@ -64,11 +67,13 @@ measurement device.  A list of acceptable fluid identifiers is shown below.
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH></TR>
 <TBODY>
-    <TR><TD>ref<TD>refrigerant</TR>
     <TR><TD>air<TD>air</TR>
-    <TR><TD>oil<TD>oil</TR>
-    <TR><TD>elec<TD>electrical</TR>
+    <TR><TD>elec<TD>electric</TR>
+    <TR><TD>gas<TD>gas</TR>
     <TR><TD>gly<TD>glycol</TR>
+    <TR><TD>h2o<TD>water</TR>
+    <TR><TD>oil<TD>oil</TR>
+    <TR><TD>ref<TD>refrigerant</TR>
 </TABLE>
 
 ### Location Label Identifier
@@ -83,41 +88,45 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH></TR>
 <TBODY>
-    <TR><TD>ret<TD>return</TR>
-    <TR><TD>mix<TD>mixed</TR>
-    <TR><TD>out<TD>outdoor</TR>
-    <TR><TD>sup<TD>supply</TR>
+    <TR><TD>crct<TD>circuit</TR>
+    <TR><TD>ctrl<TD>controller</TR>
+    <TR><TD>dis<TD>discharge</TR>
+    <TR><TD>gasl<TD>gas line</TR>
     <TR><TD>in<TD>inlet</TR>
+    <TR><TD>liql<TD>liquid line</TR>
+    <TR><TD>mix<TD>mixed</TR>
+    <TR><TD>odr<TD>outdoor</TR>
     <TR><TD>out<TD>outlet</TR>
-    <TR><TD>vfd<TD>variable frequncy drive</TR>
-    <TR><TD>ctl<TD>controller</TR>
-    <TR><TD>gas<TD>gas line</TR>
-    <TR><TD>liq<TD>liquid line</TR>
-    <TR><TD>ckt<TD>circuit</TR>
+    <TR><TD>ret<TD>return</TR>
+    <TR><TD>sup<TD>supply</TR>
 </TABLE>
 
-# Measurement Type Label Identifier
+### Measurement Type Label Identifier
 
 The measurement type label identifier is used to describe the actual type of
 measurement being recorded.  A list of acceptable measurement types is shown
 below.
 
 <TABLE>
-<CAPTION><EM>Acceptable location identifiers and descriptions.</EM></CAPTION>
+<CAPTION><EM>Acceptable measurement type identifiers and
+             descriptions.</EM></CAPTION>
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH></TR>
 <TBODY>
-    <TR><TD>T<TD>absolute temperature</TR>
-    <TR><TD>P<TD>absolute pressure</TR>
-    <TR><TD>Pg<TD>gage pressure</TR>
-    <TR><TD>dP<TD>differential pressure</TR>
-    <TR><TD>W<TD>power</TR>
-    <TR><TD>F<TD>frequency</TR>
-    <TR><TD>V<TD>voltage</TR>
-    <TR><TD>I<TD>current</TR>
-    <TR><TD>R<TD>relative humidity</TR>
-    <TR><TD>D<TD>dew point</TR>
     <TR><TD>B<TD>wet bulb</TR>
+    <TR><TD>D<TD>dew point</TR>
+    <TR><TD>dP<TD>differential pressure</TR>
+    <TR><TD>freq<TD>frequency</TR>
+    <TR><TD>I<TD>current</TR>
+    <TR><TD>T<TD>absolute temperature</TR>
+    <TR><TD>pa<TD>absolute pressure</TR>
+    <TR><TD>pg<TD>gage pressure</TR>
+    <TR><TD>pos<TD>position</TR>
+    <TR><TD>pwr<TD>power</TR>
+    <TR><TD>RH<TD>relative humidity</TR>
+    <TR><TD>spd<TD>speed</TR>
+    <TR><TD>u<TD>velocity</TR>
+    <TR><TD>V<TD>voltage</TR>
 </TABLE>

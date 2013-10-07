@@ -20,7 +20,7 @@ of the measurement.  This is accomplished using a standard labeling convention
 by the standards committee.  The standard labeling convention is described
 below and its parts are described in individual sections henceforth.
 
-    {COMPONENT}{#?}_{FLUID}_{LOCATION}{#?}_{TYPE}
+    {COMPONENT}{#?}_{FLUID}{#?}_{LOCATION}{#?}_{TYPE}
 
 The label stores information about the component, fluid, location, and type of
 measurement being recorded.  Additionally, an optional numeric identifier can be

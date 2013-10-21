@@ -143,6 +143,7 @@ below.
     <TR><TD>mdot<TD>mass flow rate</TR>
     <TR><TD>pa<TD>absolute pressure</TR>
     <TR><TD>pag<TD>absolute pressure, based on gage pressure measurement</TR>
+    <TR><TD>pd<TD>pressure difference between two points</TR>
     <TR><TD>pg<TD>gage pressure</TR>
     <TR><TD>pos<TD>position</TR>
     <TR><TD>pwr<TD>power</TR>

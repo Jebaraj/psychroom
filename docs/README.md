@@ -132,6 +132,7 @@ below.
 <TBODY>
     <TR><TD>B<TD>wet bulb</TR>
     <TR><TD>D<TD>dew point</TR>
+    <TR><TD>duty<TD>PWM duty cycle</TR>
     <TR><TD>freq<TD>frequency</TR>
     <TR><TD>I<TD>current</TR>
     <TR><TD>T<TD>temperature</TR>

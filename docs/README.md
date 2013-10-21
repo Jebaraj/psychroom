@@ -44,6 +44,7 @@ identifiers is shown below.
     <TR><TD>absr<TD>absorber</TR>
     <TR><TD>accm<TD>accumulator</TR>
     <TR><TD>ahu<TD>air handling unit</TR>
+    <TR><TD>amb<TD>ambient</TR>
     <TR><TD>comp<TD>compressor</TR>
     <TR><TD>damp<TD>damper</TR>
     <TR><TD>desr<TD>desorber</TR>
@@ -52,12 +53,14 @@ identifiers is shown below.
     <TR><TD>fan<TD>fan</TR>
     <TR><TD>filt<TD>filter</TR>
     <TR><TD>hx<TD>heat exchanger</TR>
+    <TR><TD>id<TD>indoor</TR>
     <TR><TD>mflr<TD>muffler</TR>
     <TR><TD>noz<TD>nozzle box</TR>
     <TR><TD>pump<TD>pump</TR>
     <TR><TD>rect<TD>rectifier</TR>
     <TR><TD>recv<TD>receiver</TR>
     <TR><TD>sep<TD>separator</TR>
+    <TR><TD>od<TD>outdoor</TR>
     <TR><TD>valv<TD>valve</TR>
     <TR><TD>vsd<TD>variable speed/frequency drive</TR>
     <TR><TD>xd<TD>expansion device</TR>

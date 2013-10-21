@@ -59,6 +59,7 @@ identifiers is shown below.
     <TR><TD>recv<TD>receiver</TR>
     <TR><TD>sep<TD>separator</TR>
     <TR><TD>valv<TD>valve</TR>
+    <TR><TD>vsd<TD>variable speed/frequency drive</TR>
     <TR><TD>xd<TD>expansion device</TR>
 </TABLE>
 

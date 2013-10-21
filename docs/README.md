@@ -149,6 +149,7 @@ below.
     <TR><TD>pwr<TD>power</TR>
     <TR><TD>RH<TD>relative humidity</TR>
     <TR><TD>spd<TD>rotational speed</TR>
+    <TR><TD>sw<TD>switch</TR>
     <TR><TD>u<TD>flow velocity</TR>
     <TR><TD>V<TD>voltage</TR>
     <TR><TD>Vdot<TD>volumetric flow rate</TR>

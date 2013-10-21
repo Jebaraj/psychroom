@@ -104,6 +104,7 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
     <TR><TD>exh<TD>exhaust</TR>
     <TR><TD>gasl<TD>gas line</TR>
     <TR><TD>in<TD>inlet</TR>
+    <TR><TD>int<TD>internal, interior</TR>
     <TR><TD>idr<TD>indoor</TR>
     <TR><TD>lvl<TD>level</TR>
     <TR><TD>liql<TD>liquid line</TR>

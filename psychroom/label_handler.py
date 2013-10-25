@@ -169,17 +169,28 @@ def make_component_library():
     """
 
     library = {
+        'absr': 'absorber',
         'accm': 'accumulator',
         'ahu': 'air handling unit',
         'comp': 'compressor',
+        'damp': 'damper',
+        'desr': 'desorber',
         'idf': 'indoor fan',
+        'ehr': 'electric heater',
+        'ejr': 'ejector',
+        'fan': 'fan',
+        'filt': 'filter',
         'idhx': 'indoor heat exchanger',
         'ithx': 'internal heat exchanger',
-        'oae': 'outdoor-air economizer',
-        'odf': 'outdoor fan',
+        'mflr': 'muffler',
+        'noz': 'nozzle',
         'odhx': 'outdoor heat exchanger',
-        'vfd': 'variable frequency drive',
-        'xv': 'expansion valve',
+        'pump': 'pump',
+        'rect': 'rectifier',
+        'recv': 'receiver',
+        'sep': 'separator',
+        'valv': 'valve',
+        'xd': 'expansion device',
     }
 
     return library

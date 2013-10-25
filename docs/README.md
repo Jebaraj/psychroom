@@ -52,8 +52,11 @@ identifiers is shown below.
     <TR><TD>fan<TD>fan</TR>
     <TR><TD>filt<TD>filter</TR>
     <TR><TD>hx<TD>heat exchanger</TR>
+    <TR><TD>idhx<TD>indoor heat exchanger</TR>
+    <TR><TD>ithx<TD>internal heat exchanger</TR>
     <TR><TD>mflr<TD>muffler</TR>
     <TR><TD>noz<TD>nozzle box</TR>
+    <TR><TD>odhx<TD>outdoor heat exchanger</TR>
     <TR><TD>pump<TD>pump</TR>
     <TR><TD>rect<TD>rectifier</TR>
     <TR><TD>recv<TD>receiver</TR>
@@ -145,3 +148,13 @@ below.
     <TR><TD>V<TD>voltage</TR>
     <TR><TD>Vdot<TD>volumetric flow rate</TR>
 </TABLE>
+
+### Differential Measurements
+
+TO in between indicators.
+
+## Measurement Data Output File Format
+
+### File Header Information
+
+What do we put in the header?

@@ -38,6 +38,8 @@ List of tasks required, in order of time needed.
 
 8.  Calibration / Uncertainty Information
 
+9.  Model numbers of system components as well as details for custom build devices (critical technical details)
+
 ## I/O Methods ##
 
 1.  Python

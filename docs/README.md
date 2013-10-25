@@ -44,6 +44,7 @@ identifiers is shown below.
     <TR><TD>absr<TD>absorber</TR>
     <TR><TD>accm<TD>accumulator</TR>
     <TR><TD>ahu<TD>air handling unit</TR>
+    <TR><TD>amb<TD>ambient</TR>
     <TR><TD>comp<TD>compressor</TR>
     <TR><TD>damp<TD>damper</TR>
     <TR><TD>desr<TD>desorber</TR>
@@ -51,7 +52,6 @@ identifiers is shown below.
     <TR><TD>ejr<TD>ejector/injector</TR>
     <TR><TD>fan<TD>fan</TR>
     <TR><TD>filt<TD>filter</TR>
-    <TR><TD>hx<TD>heat exchanger</TR>
     <TR><TD>idhx<TD>indoor heat exchanger</TR>
     <TR><TD>ithx<TD>internal heat exchanger</TR>
     <TR><TD>mflr<TD>muffler</TR>
@@ -61,7 +61,9 @@ identifiers is shown below.
     <TR><TD>rect<TD>rectifier</TR>
     <TR><TD>recv<TD>receiver</TR>
     <TR><TD>sep<TD>separator</TR>
+    <TR><TD>od<TD>outdoor</TR>
     <TR><TD>valv<TD>valve</TR>
+    <TR><TD>vsd<TD>variable speed/frequency drive</TR>
     <TR><TD>xd<TD>expansion device</TR>
 </TABLE>
 
@@ -106,6 +108,7 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
     <TR><TD>exh<TD>exhaust</TR>
     <TR><TD>gasl<TD>gas line</TR>
     <TR><TD>in<TD>inlet</TR>
+    <TR><TD>int<TD>internal, interior</TR>
     <TR><TD>idr<TD>indoor</TR>
     <TR><TD>lvl<TD>level</TR>
     <TR><TD>liql<TD>liquid line</TR>
@@ -134,16 +137,20 @@ below.
 <TBODY>
     <TR><TD>B<TD>wet bulb</TR>
     <TR><TD>D<TD>dew point</TR>
+    <TR><TD>duty<TD>PWM duty cycle</TR>
     <TR><TD>freq<TD>frequency</TR>
     <TR><TD>I<TD>current</TR>
     <TR><TD>T<TD>temperature</TR>
     <TR><TD>mdot<TD>mass flow rate</TR>
     <TR><TD>pa<TD>absolute pressure</TR>
+    <TR><TD>pag<TD>absolute pressure, based on gage pressure measurement</TR>
+    <TR><TD>pd<TD>pressure difference between two points</TR>
     <TR><TD>pg<TD>gage pressure</TR>
     <TR><TD>pos<TD>position</TR>
     <TR><TD>pwr<TD>power</TR>
     <TR><TD>RH<TD>relative humidity</TR>
     <TR><TD>spd<TD>rotational speed</TR>
+    <TR><TD>sw<TD>switch</TR>
     <TR><TD>u<TD>flow velocity</TR>
     <TR><TD>V<TD>voltage</TR>
     <TR><TD>Vdot<TD>volumetric flow rate</TR>

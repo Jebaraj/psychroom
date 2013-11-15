@@ -104,6 +104,7 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH></TR>
 <TBODY>
+    <TR><TD>srnd<TD>surroundings</TR>
     <TR><TD>crct<TD>circuit</TR>
     <TR><TD>ctrl<TD>controller</TR>
     <TR><TD>exh<TD>exhaust</TR>

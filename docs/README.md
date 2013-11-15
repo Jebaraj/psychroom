@@ -63,6 +63,7 @@ identifiers is shown below.
     <TR><TD>sep<TD>separator</TR>
     <TR><TD>od<TD>outdoor</TR>
     <TR><TD>valv<TD>valve</TR>
+    <TR><TD>rvalv<TD>reversing valve</TR>
     <TR><TD>vsd<TD>variable speed/frequency drive</TR>
     <TR><TD>xd<TD>expansion device</TR>
 </TABLE>

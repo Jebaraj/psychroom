@@ -160,7 +160,19 @@ below.
 
 ### Differential Measurements
 
-TO in between indicators.
+Differential measurements are handled in a similar way to normal single point measurements.
+
+However, each part of the namestring can now be composed of two parts - the distinction between 
+first and second part is made by using a capital letter. Before the type, add "Delta" to specify
+that a difference measurement is used. Naming scheme:
+
+    {component1}{Componen2?}{#?}_{fluid1}{Fluid2?}{#?}_{location1}{Location2?}{#?}_Delta{type1}{Type2?}
+
+Example:
+Difference between compressor inlet temperature and evaporator outlet temperature:
+
+    EvapComp_Ref_
+
 
 ## Measurement Data Output File Format
 

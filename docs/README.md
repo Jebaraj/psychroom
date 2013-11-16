@@ -166,12 +166,18 @@ However, each part of the namestring can now be composed of two parts - the dist
 first and second part is made by using a capital letter. Before the type, add "Delta" to specify
 that a difference measurement is used. Naming scheme:
 
-    {component1}{Componen2?}{#?}_{fluid1}{Fluid2?}{#?}_{location1}{Location2?}{#?}_Delta{type1}{Type2?}
+    {component1}{Componen2?}{#?}_{fluid1}{Fluid2?}{#?}_{location1}{Location2}{#?}_Delta{type1}{Type2?}
 
-Example:
-Difference between compressor inlet temperature and evaporator outlet temperature:
+#### Examples:
+Difference between compressor refrigerant inlet temperature and indoor heat exchanger (evaporator) refrigerant 
+outlet temperature:
 
-    EvapComp_Ref_
+    idhxComp_ref_outIn_DeltaT
+ 
+ Difference between air inlet temperature of evaporator and refrigerant inlet temperature:
+    
+    idhx_airRef_inIn_DeltaT
+
 
 
 ## Measurement Data Output File Format

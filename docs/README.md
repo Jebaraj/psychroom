@@ -102,9 +102,9 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
-    <TR><TH>Identifier</TH><TH>Description</TH></TR>
+    <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
 <TBODY>
-    <TR><TD>srnd<TD>surroundings</TR>
+    <TR><TD>srnd<TD>surroundings<TD>The surrounding of the psychrometric chamber<TD> noz_air_srndInt_DeltaP is the air pressure difference between the atmosphere and the interior of the nozzle box</TR>
     <TR><TD>crct<TD>circuit</TR>
     <TR><TD>ctrl<TD>controller</TR>
     <TR><TD>exh<TD>exhaust</TR>

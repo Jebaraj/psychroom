@@ -183,6 +183,15 @@ outlet temperature:
     
     idhx_airRef_inIn_DeltaT
 
+    
+### Example Systems
+
+Here is a list of systems with their sensors labeled as examples.
+
+#### Refrigerant circuit of a ductless heat pump system
+The diagram below shows the sensor installation location of a ductless heat pump system.
+
+<img src="https://raw.github.com/ahjortland/psychroom/master/docs/DHP.png" alt="DHP_ref_fig" title="DHP_ref_fig" style="width: 500px;"/>
 
 
 ## Measurement Data Output File Format

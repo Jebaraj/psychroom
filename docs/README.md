@@ -104,23 +104,23 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
 <TBODY>
-    <TR><TD>srnd<TD>surroundings<TD>The surrounding of the psychrometric chamber<TD> noz_air_srndInt_DeltaP is the air pressure difference between the atmosphere and the interior of the nozzle box</TR>
-    <TR><TD>crct<TD>circuit</TR>
-    <TR><TD>ctrl<TD>controller</TR>
-    <TR><TD>exh<TD>exhaust</TR>
-    <TR><TD>gasl<TD>gas line</TR>
-    <TR><TD>in<TD>inlet</TR>
-    <TR><TD>int<TD>internal, interior</TR>
-    <TR><TD>idr<TD>indoor</TR>
-    <TR><TD>lvl<TD>level</TR>
-    <TR><TD>liql<TD>liquid line</TR>
-    <TR><TD>mix<TD>mixed</TR>
-    <TR><TD>odr<TD>outdoor</TR>
-    <TR><TD>out<TD>outlet</TR>
-    <TR><TD>phas<TD>phase</TR>
-    <TR><TD>plnm<TD>plenum</TR>
-    <TR><TD>ret<TD>return</TR>
-    <TR><TD>sply<TD>supply</TR>
+    <TR><TD>srnd<TD>surroundings<TD>Surroundings of the psychrometric chamber<TD> noz_air_srndInt_DeltaP is the air pressure difference between the atmosphere and the interior of the nozzle box</TR>
+    <TR><TD>crct<TD>circuit<TD>Anywhere between the main inlet and outlet of heat exchangers<TD> odhx_ref_crct1_T is the temperature at a location marked as #1  within the refrigerant circuit of the outdoor heat exchanger</TR>
+    <TR><TD>ctrl<TD>controller<TD>Controller of a copmonent<TD> fan_elec_ctrl_pwr is the power consumption of the fan controller<TD></TR>
+    <TR><TD>exh<TD>exhaust<TD>Exhaust from a component<TD> ahu_air_exh_T is the temperature at the exhaust of the air handling unit</TR>
+    <TR><TD>gasl<TD>gas line<TD>Gas line along the refrigerant circuit of a component<TD> odhx_ref_gasl_pg is the gag pressure at the gas line of the outdoor heat exchanger</TR>
+    <TR><TD>in<TD>inlet<TD>Inlet of a component<TD> ithx_brn_in_T is the inlet brine temperature of an internal heat exchanger</TR>
+    <TR><TD>int<TD>internal, interior<TD>Internal part of a component<TD> comp_ref_int1_pg is the gage pressure of the internal location #1 inside the compressor</TR>
+    <TR><TD>idr<TD>indoor<TD>A location in the indoor room around a component<TD> ahu_air_indr_B is the indoor room wet-bulb temperature around the air handling unit</TR>
+    <TR><TD>lvl<TD>level<TD><TD></TR>
+    <TR><TD>liql<TD>liquid line<TD>Liquid line along the refrigerant circuit of a component<TD> odhx_ref_liql_pg is the gage pressure at the liquid line of the outdoor heat exchanger</TR>
+    <TR><TD>mix<TD>mixed<TD>Mixing chamber inside a component<TD> ahu_air_mix_D is the dewpoint at the mixing chamber inside the air handling unit</TR>
+    <TR><TD>odr<TD>outdoor<TD>A location around the outdoor room at a component<TD> comp_air_odr_T is the temperature around the compressor in the outdoor room</TR>
+    <TR><TD>out<TD>outlet<TD>Outlet of a component<TD>xd2_ref_out_pg is the gage pressure at the refrigerant outlet of expansion valve #2</TR>
+    <TR><TD>phas<TD>phase<TD>Phase of power supply to a component<TD>comp_elec_phas2_I is the current at the second phase of the electrical power supply to the compressor</TR>
+    <TR><TD>plnm<TD>plenum<TD>Plenum of a component<TD>idhx_air_plenum_D is the dewpoint at the plenum of the indoor unit heat exchanger</TR>
+    <TR><TD>ret<TD>return<TD>Return air duct of a component<TD>ahu_air_ret_B is the air wet-bulb temperature at the return air pipe of the air handling unit</TR>
+    <TR><TD>sply<TD>supply<TD>Supply air duct of a component<TD>ahu_air_sply_RH is the air reliative humidity at the supply air pipe of the air handling unit</TR></TR>
 </TABLE>
 
 ### Measurement Type Label Identifier

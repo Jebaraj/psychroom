@@ -142,25 +142,26 @@ below.
     <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
 <TBODY>
     <TR><TD>B<TD>wet bulb<TD>Wet bulb for humid air.<TD>idhx_air_in_B is indoor air heat ezxchanger inlet wet bulb temperature.</TR>
-    <TR><TD>D<TD>dew point<TD><TD></TR>
-    <TR><TD>duty<TD>PWM duty cycle<TD><TD></TR>
-    <TR><TD>freq<TD>frequency<TD><TD></TR>
-    <TR><TD>I<TD>current<TD><TD></TR>
-    <TR><TD>T<TD>temperature<TD><TD></TR>
-    <TR><TD>mdot<TD>mass flow rate<TD><TD></TR>
-    <TR><TD>pa<TD>absolute pressure<TD><TD></TR>
-    <TR><TD>pag<TD>absolute pressure, based on gage pressure measurement<TD><TD></TR>
-    <TR><TD>Delta{type1}{Type2?}<TD>Pressure difference between two points, see Differential Measurements<TD><TD></TR>
-    <TR><TD>pg<TD>gage pressure<TD><TD></TR>
-    <TR><TD>pos<TD>position<TD><TD></TR>
-    <TR><TD>pwr<TD>power<TD><TD></TR>
-    <TR><TD>RH<TD>relative humidity<TD><TD></TR>
-    <TR><TD>spd<TD>rotational speed<TD><TD></TR>
-    <TR><TD>sw<TD>switch<TD><TD></TR>
+    <TR><TD>D<TD>dew point<TD>Dry bulb for humid air<TD>idhx_air_in_D is indoor air heat ezxchanger inlet dry bulb temperature.</TR>
+    <TR><TD>duty<TD>PWM duty cycle<TD>Duty cycle for PWM type controls and/or measurements.<TD>xd_ref_liql_PWM is the duty cycle of a pulse width modulated electronic expansion valve./TR>
+    <TR><TD>freq<TD>frequency<TD>Frequency of a component.<TD>vsd_elec_out_freq is the output frequency of a variable speed drive and equivalent to comp_elec_in_freq. </TR>
+    <TR><TD>I<TD>current<TD> Measured electrical current.<TD> vsd_elec_out_I is the output current of a variable speed drive and typically equivalent to comp_elec_in_I. </TR>
+    <TR><TD>T<TD>temperature<TD>Temperature if not wet or dry bulb.<TD>comp_ref_out_T is the refrigerant temperature measured at the outlet of the compressor.</TR>
+    <TR><TD>mdot<TD>mass flow rate<TD>Measured mass flow rate.<TD>comp_ref_out_mdot is the refrigerant outlet flowrate and is different from comp_ref_in_mdot if vapor injected compression is used.</TR>
+    <TR><TD>pa<TD>absolute pressure<TD>Absolute pressure measurement.<TD>comp_ref_out_pa is the absolute refrigerant outlet pressure of the compressor if an absolute pressure transducer was used. </TR>
+    <TR><TD>pag<TD>absolute pressure, based on gage pressure measurement<TD>Gauge pressure measurement that was converted to an absolute pressure at the time of measurement.<TD>comp_ref_out_pag is the absolute refrigerant outlet pressure of the compressor if a gauge pressure transducer was used and the value is already containing the compensation for the ambient pressure.</TR>
+    <TR><TD>Delta{type1}{Type2?}<TD>Pressure difference between two points, see Differential Measurements.<TD><TD>idhxComp_ref_outIn_DeltaT is the difference between compressor refrigerant inlet temperature and indoor heat exchanger (evaporator) refrigerant outlet temperature</TR>
+    <TR><TD>pg<TD>gauge pressure<TD>Gauge pressure measurement.<TD> comp_ref_out_pg is the gauge refrigerant outlet pressure of the compressor if a gauge pressure transducer was used. </TR>
+    <TR><TD>pos<TD>position<TD>Position of an adjustable component.<TD> ahu_air_damp_pos is the opening position of the damper in the air handling unit (use numbers if multiple).</TR>
+    <TR><TD>pwr<TD>power<TD>Measured power.<TD>mot1_mech_out_power is the mechanical output power of motor 1.</TR>
+    <TR><TD>RH<TD>relative humidity<TD>Relative humidity of air.<TD>idhx_air_out_RH is the relative humidity of the air leaving the evaporator.</TR>
+    <TR><TD>spd<TD>rotational speed<TD>Rotational speed of a component.<TD> comp_mech_int_speed is the rotational speed of the compressor and typically different from comp_elec_in_freq.</TR>
+    <TR><TD>sw<TD>switch<TD>State of a switch.<TD>sep_oil_lvl_sw is the state of the liquid level switch in the oil separator.</TR>
     <TR><TD>u<TD>flow velocity<TD><TD></TR>
     <TR><TD>V<TD>voltage<TD><TD></TR>
     <TR><TD>Vdot<TD>volumetric flow rate<TD><TD></TR>
 </TABLE>
+
 
 ### Differential Measurements
 
@@ -182,6 +183,15 @@ outlet temperature:
     
     idhx_airRef_inIn_DeltaT
 
+    
+### Example Systems
+
+Here is a list of systems with their sensors labeled as examples.
+
+#### Refrigerant circuit of a ductless heat pump system
+The diagram below shows the sensor installation location of a ductless heat pump system.
+
+<img src="https://raw.github.com/ahjortland/psychroom/master/docs/DHP.png" alt="DHP_ref_fig" title="DHP_ref_fig" style="width: 500px;"/>
 
 
 ## Measurement Data Output File Format

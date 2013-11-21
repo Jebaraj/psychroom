@@ -104,9 +104,9 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
 <TBODY>
-    <TR><TD>srnd<TD>surroundings<TD>Surroundings of the psychrometric chamber<TD> noz_air_srndInt_DeltaP is the air pressure difference between the atmosphere and the interior of the nozzle box</TR>
     <TR><TD>crct<TD>circuit<TD>Anywhere between the main inlet and outlet of heat exchangers<TD> odhx_ref_crct1_T is the temperature at a location marked as #1  within the refrigerant circuit of the outdoor heat exchanger</TR>
     <TR><TD>ctrl<TD>controller<TD>Controller of a copmonent<TD> fan_elec_ctrl_pwr is the power consumption of the fan controller<TD></TR>
+    <TR><TD>dmp<TD>damper<TD>Damper of a copmonent<TD> ahu_air_damp_pos is the position of the damper in the air handling unit (use numbers if multiple).<TD></TR>
     <TR><TD>exh<TD>exhaust<TD>Exhaust from a component<TD> ahu_air_exh_T is the temperature at the exhaust of the air handling unit</TR>
     <TR><TD>gasl<TD>gas line<TD>Gas line along the refrigerant circuit of a component<TD> odhx_ref_gasl_pg is the gag pressure at the gas line of the outdoor heat exchanger</TR>
     <TR><TD>in<TD>inlet<TD>Inlet of a component<TD> ithx_brn_in_T is the inlet brine temperature of an internal heat exchanger</TR>
@@ -121,6 +121,7 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
     <TR><TD>plnm<TD>plenum<TD>Plenum of a component<TD>idhx_air_plenum_D is the dewpoint at the plenum of the indoor unit heat exchanger</TR>
     <TR><TD>ret<TD>return<TD>Return air duct of a component<TD>ahu_air_ret_B is the air wet-bulb temperature at the return air pipe of the air handling unit</TR>
     <TR><TD>sply<TD>supply<TD>Supply air duct of a component<TD>ahu_air_sply_RH is the air reliative humidity at the supply air pipe of the air handling unit</TR></TR>
+    <TR><TD>srnd<TD>surroundings<TD>Surroundings of the psychrometric chamber<TD> noz_air_srndInt_DeltaP is the air pressure difference between the atmosphere and the interior of the nozzle box</TR>
 </TABLE>
 
 ### Measurement Type Label Identifier

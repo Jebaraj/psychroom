@@ -48,6 +48,7 @@ identifiers is shown below.
     <TR><TD>comp<TD>compressor</TR>
     <TR><TD>damp<TD>damper</TR>
     <TR><TD>desr<TD>desorber</TR>
+    <TR><TD>eng<TD>engine/TR>
     <TR><TD>ehr<TD>electric heater</TR>
     <TR><TD>ejr<TD>ejector/injector</TR>
     <TR><TD>fan<TD>fan</TR>
@@ -55,6 +56,7 @@ identifiers is shown below.
     <TR><TD>idhx<TD>indoor heat exchanger</TR>
     <TR><TD>ithx<TD>internal heat exchanger</TR>
     <TR><TD>mflr<TD>muffler</TR>
+    <TR><TD>mot<TD>motor</TR>
     <TR><TD>noz<TD>nozzle box</TR>
     <TR><TD>odhx<TD>outdoor heat exchanger</TR>
     <TR><TD>pump<TD>pump</TR>
@@ -90,6 +92,7 @@ measurement device.  A list of acceptable fluid identifiers is shown below.
     <TR><TD>ref<TD>refrigerant</TR>
     <TR><TD>rich<TD>rich solution</TR>
     <TR><TD>weak<TD>weak solution</TR>
+    <TR><TD>mech<TD>mechanical, e.g. shaft or belt</TR>
 </TABLE>
 
 ### Location Label Identifier

@@ -92,7 +92,7 @@ measurement device.  A list of acceptable fluid identifiers is shown below.
     <TR><TD>ref<TD>refrigerant</TR>
     <TR><TD>rich<TD>rich solution</TR>
     <TR><TD>weak<TD>weak solution</TR>
-    <TR><TD>mech<TD>mechanical, e.g. shaft or belt</TR>
+    <TR><TD>mech<TD>mechanical, e.g. shaft or belt; what exactly needs to be clear from schematic</TR>
 </TABLE>
 
 ### Location Label Identifier

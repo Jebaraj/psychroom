@@ -135,27 +135,27 @@ below.
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
-    <TR><TH>Identifier</TH><TH>Description</TH></TR>
+    <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
 <TBODY>
-    <TR><TD>B<TD>wet bulb</TR>
-    <TR><TD>D<TD>dew point</TR>
-    <TR><TD>duty<TD>PWM duty cycle</TR>
-    <TR><TD>freq<TD>frequency</TR>
-    <TR><TD>I<TD>current</TR>
-    <TR><TD>T<TD>temperature</TR>
-    <TR><TD>mdot<TD>mass flow rate</TR>
-    <TR><TD>pa<TD>absolute pressure</TR>
-    <TR><TD>pag<TD>absolute pressure, based on gage pressure measurement</TR>
-    <TR><TD>pd<TD>pressure difference between two points</TR>
-    <TR><TD>pg<TD>gage pressure</TR>
-    <TR><TD>pos<TD>position</TR>
-    <TR><TD>pwr<TD>power</TR>
-    <TR><TD>RH<TD>relative humidity</TR>
-    <TR><TD>spd<TD>rotational speed</TR>
-    <TR><TD>sw<TD>switch</TR>
-    <TR><TD>u<TD>flow velocity</TR>
-    <TR><TD>V<TD>voltage</TR>
-    <TR><TD>Vdot<TD>volumetric flow rate</TR>
+    <TR><TD>B<TD>wet bulb<TD>Wet bulb for humid air.<TD>idhx_air_in_B is indoor air heat ezxchanger inlet wet bulb temperature.</TR>
+    <TR><TD>D<TD>dew point<TD><TD></TR>
+    <TR><TD>duty<TD>PWM duty cycle<TD><TD></TR>
+    <TR><TD>freq<TD>frequency<TD><TD></TR>
+    <TR><TD>I<TD>current<TD><TD></TR>
+    <TR><TD>T<TD>temperature<TD><TD></TR>
+    <TR><TD>mdot<TD>mass flow rate<TD><TD></TR>
+    <TR><TD>pa<TD>absolute pressure<TD><TD></TR>
+    <TR><TD>pag<TD>absolute pressure, based on gage pressure measurement<TD><TD></TR>
+    <TR><TD>Delta{type1}{Type2?}<TD>Pressure difference between two points, see Differential Measurements<TD><TD></TR>
+    <TR><TD>pg<TD>gage pressure<TD><TD></TR>
+    <TR><TD>pos<TD>position<TD><TD></TR>
+    <TR><TD>pwr<TD>power<TD><TD></TR>
+    <TR><TD>RH<TD>relative humidity<TD><TD></TR>
+    <TR><TD>spd<TD>rotational speed<TD><TD></TR>
+    <TR><TD>sw<TD>switch<TD><TD></TR>
+    <TR><TD>u<TD>flow velocity<TD><TD></TR>
+    <TR><TD>V<TD>voltage<TD><TD></TR>
+    <TR><TD>Vdot<TD>volumetric flow rate<TD><TD></TR>
 </TABLE>
 
 ### Differential Measurements

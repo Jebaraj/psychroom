@@ -28,6 +28,26 @@ assigned to distiguish between multiple occurances of components or locations.
 For example in a dual compressor systems, the compressors could be identified as
 compressor 0 and compressor 1.
 
+### Differential Measurements
+
+Differential measurements are handled in a similar way to normal single point measurements.
+
+However, each part of the namestring can now be composed of two parts - the distinction between 
+first and second part is made by using a capital letter. Before the type, add "Delta" to specify
+that a difference measurement is used. Naming scheme:
+
+    {component1}{Componen2?}{#?}_{fluid1}{Fluid2?}{#?}_{location1}{Location2}{#?}_Delta{type1}{Type2?}
+
+#### Examples:
+Difference between compressor refrigerant inlet temperature and indoor heat exchanger (evaporator) refrigerant 
+outlet temperature:
+
+    idhxComp_ref_outIn_DeltaT
+ 
+ Difference between air inlet temperature of evaporator and refrigerant inlet temperature:
+    
+    idhx_airRef_inIn_DeltaT
+
 ### Component Label Identifier
 
 The component label identifier is used to describe which component in the
@@ -124,19 +144,24 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
         the air handling unit<TD>
     </TR>
     <TR><TD>exh<TD>exhaust<TD>Exhaust from a component<TD> ahu_air_exh_T is the temperature at the exhaust of the air handling unit</TR>
-    <TR><TD>gasl<TD>gas line<TD>Gas line along the refrigerant circuit of a component<TD> odhx_ref_gasl_pg is the gag pressure at the gas line of the outdoor heat exchanger</TR>
+    <TR><TD>gasl<TD>gas line<TD>Gas line along the refrigerant circuit of a component<TD> odhx_ref_gasl_pg is the gage pressure at the exit towards the gas line of the system at the outdoor heat exchanger</TR>
     <TR><TD>in<TD>inlet<TD>Inlet of a component<TD> ithx_brn_in_T is the inlet brine temperature of an internal heat exchanger</TR>
     <TR><TD>int<TD>internal, interior<TD>Internal part of a component<TD> comp_ref_int1_pg is the gage pressure of the internal location #1 inside the compressor</TR>
     <TR><TD>idr<TD>indoor<TD>A location in the indoor room around a component<TD> ahu_air_indr_B is the indoor room wet-bulb temperature around the air handling unit</TR>
     <TR><TD>lvl<TD>level<TD><TD></TR>
-    <TR><TD>liql<TD>liquid line<TD>Liquid line along the refrigerant circuit of a component<TD> odhx_ref_liql_pg is the gage pressure at the liquid line of the outdoor heat exchanger</TR>
+    <TR>
+        <TD>liql<TD>liquid line
+        <TD>Liquid line along the refrigerant circuit of a component
+        <TD> odhx_ref_liql_pg is the gage pressure at the exit towards 
+        the liquid line at the outdoor heat exchanger
+    </TR>
     <TR><TD>mix<TD>mixed<TD>Mixing chamber inside a component<TD> ahu_air_mix_D is the dewpoint at the mixing chamber inside the air handling unit</TR>
     <TR><TD>odr<TD>outdoor<TD>A location around the outdoor room at a component<TD> comp_air_odr_T is the temperature around the compressor in the outdoor room</TR>
     <TR><TD>out<TD>outlet<TD>Outlet of a component<TD>xd2_ref_out_pg is the gage pressure at the refrigerant outlet of expansion valve #2</TR>
     <TR><TD>phas<TD>phase<TD>Phase of power supply to a component<TD>comp_elec_phas2_I is the current at the second phase of the electrical power supply to the compressor</TR>
     <TR><TD>plnm<TD>plenum<TD>Plenum of a component<TD>idhx_air_plenum_D is the dewpoint at the plenum of the indoor unit heat exchanger</TR>
     <TR><TD>ret<TD>return<TD>Return air duct of a component<TD>ahu_air_ret_B is the air wet-bulb temperature at the return air pipe of the air handling unit</TR>
-    <TR><TD>sply<TD>supply<TD>Supply air duct of a component<TD>ahu_air_sply_RH is the air reliative humidity at the supply air pipe of the air handling unit</TR></TR>
+    <TR><TD>sply<TD>supply<TD>Supply air duct of a component<TD>ahu_air_sply_RH is the air relative humidity at the supply air pipe of the air handling unit</TR></TR>
     <TR><TD>srnd<TD>surroundings<TD>Surroundings of the psychrometric chamber<TD> noz_air_srndInt_DeltaP is the air pressure difference between the atmosphere and the interior of the nozzle box</TR>
 </TABLE>
 
@@ -154,12 +179,22 @@ below.
 <THEAD valign="top">
     <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
 <TBODY>
-    <TR><TD>B<TD>wet bulb<TD>Wet bulb for humid air.<TD>idhx_air_in_B is indoor air heat ezxchanger inlet wet bulb temperature.</TR>
-    <TR><TD>D<TD>dew point<TD>Dry bulb for humid air<TD>idhx_air_in_D is indoor air heat ezxchanger inlet dry bulb temperature.</TR>
-    <TR><TD>duty<TD>PWM duty cycle<TD>Duty cycle for PWM type controls and/or measurements.<TD>xd_ref_liql_PWM is the duty cycle of a pulse width modulated electronic expansion valve./TR>
+    <TR>
+        <TD>B<TD>wet bulb<TD>Wet bulb for humid air.
+        <TD>idhx_air_in_B is indoor air heat ezxchanger inlet wet bulb temperature.
+    </TR>
+    <TR>
+        <TD>D<TD>dew point<TD>Dewpoint for humid air
+        <TD>idhx_air_in_D is indoor air heat ezxchanger inlet dry bulb temperature.
+    </TR>
+    <TR>
+        <TD>duty<TD>PWM duty cycle
+        <TD>Duty cycle for PWM (pulse-width-modulation) type controls and/or measurements.
+        <TD>xd_ref_liql_PWM is the duty cycle of a pulse width modulated electronic expansion valve.
+    </TR>
     <TR><TD>freq<TD>frequency<TD>Frequency of a component.<TD>vsd_elec_out_freq is the output frequency of a variable speed drive and equivalent to comp_elec_in_freq. </TR>
     <TR><TD>I<TD>current<TD> Measured electrical current.<TD> vsd_elec_out_I is the output current of a variable speed drive and typically equivalent to comp_elec_in_I. </TR>
-    <TR><TD>T<TD>temperature<TD>Temperature if not wet or dry bulb.<TD>comp_ref_out_T is the refrigerant temperature measured at the outlet of the compressor.</TR>
+    <TR><TD>T<TD>temperature<TD>Temperature.<TD>comp_ref_out_T is the refrigerant temperature measured at the outlet of the compressor.</TR>
     <TR><TD>mdot<TD>mass flow rate<TD>Measured mass flow rate.<TD>comp_ref_out_mdot is the refrigerant outlet flowrate and is different from comp_ref_in_mdot if vapor injected compression is used.</TR>
     <TR><TD>pa<TD>absolute pressure<TD>Absolute pressure measurement.<TD>comp_ref_out_pa is the absolute refrigerant outlet pressure of the compressor if an absolute pressure transducer was used. </TR>
     <TR><TD>pag<TD>absolute pressure, based on gage pressure measurement<TD>Gauge pressure measurement that was converted to an absolute pressure at the time of measurement.<TD>comp_ref_out_pag is the absolute refrigerant outlet pressure of the compressor if a gauge pressure transducer was used and the value is already containing the compensation for the ambient pressure.</TR>
@@ -174,27 +209,6 @@ below.
     <TR><TD>V<TD>voltage<TD><TD></TR>
     <TR><TD>Vdot<TD>volumetric flow rate<TD><TD></TR>
 </TABLE>
-
-
-### Differential Measurements
-
-Differential measurements are handled in a similar way to normal single point measurements.
-
-However, each part of the namestring can now be composed of two parts - the distinction between 
-first and second part is made by using a capital letter. Before the type, add "Delta" to specify
-that a difference measurement is used. Naming scheme:
-
-    {component1}{Componen2?}{#?}_{fluid1}{Fluid2?}{#?}_{location1}{Location2}{#?}_Delta{type1}{Type2?}
-
-#### Examples:
-Difference between compressor refrigerant inlet temperature and indoor heat exchanger (evaporator) refrigerant 
-outlet temperature:
-
-    idhxComp_ref_outIn_DeltaT
- 
- Difference between air inlet temperature of evaporator and refrigerant inlet temperature:
-    
-    idhx_airRef_inIn_DeltaT
 
     
 ### Example Systems

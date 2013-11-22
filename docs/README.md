@@ -170,7 +170,6 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
 The measurement type label identifier is used to describe the actual type of
 measurement being recorded.  A list of acceptable measurement types is shown
 below.
-
 <TABLE>
 <CAPTION><EM>Acceptable measurement type identifiers and
              descriptions.</EM></CAPTION>
@@ -181,17 +180,19 @@ below.
 <TBODY>
     <TR>
         <TD>B<TD>wet bulb<TD>Wet bulb for humid air.
-        <TD>idhx_air_in_B is indoor air heat ezxchanger inlet wet bulb temperature.
+        <TD>idhx_air_in_B is indoor air heat exchanger inlet wet bulb 
+	temperature.
     </TR>
     <TR>
-        <TD>D<TD>dew point<TD>Dewpoint for humid air
-        <TD>idhx_air_in_D is indoor air heat ezxchanger inlet dry bulb temperature.
+        <TD>D<TD>dew point<TD>Dewpoint for humid air/
+        <TD>idhx_air_in_D is indoor air heat exchanger inlet dew point 
+	temperature.
     </TR>
     <TR>
         <TD>duty<TD>PWM duty cycle
         <TD>Duty cycle for PWM (pulse-width-modulation) type signals.
-        <TD>xd_ref_liql_PWM is the duty cycle of a pulse width modulated electronic 
-	expansion valve.
+        <TD>xd_ref_liql_PWM is the duty cycle of a pulse width modulated 
+	electronic expansion valve.
     </TR>
     <TR>
         <TD>freq<TD>frequency
@@ -234,13 +235,6 @@ below.
         <TD>comp_ref_out_pag is the absolute refrigerant outlet pressure of the 
 	compressor if a gauge pressure transducer was used and the value is 
 	already containing the compensation for the ambient pressure.
-    </TR>
-    <TR>
-        <TD>Delta{type1}{Type2?}
-        <TD>Pressure difference between two points, see Differential Measurements.
-        <TD><TD>idhxComp_ref_outIn_DeltaT is the difference between compressor 
-	refrigerant inlet temperature and indoor heat exchanger (evaporator) 
-	refrigerant outlet temperature
     </TR>
     <TR>
         <TD>pg
@@ -304,7 +298,6 @@ below.
 	nozzle box.
     </TR>
 </TABLE>
-
     
 ### Example Systems
 

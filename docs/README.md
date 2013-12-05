@@ -719,7 +719,7 @@ The labeling of the sensors is listed as follows.
 
 #### Air-side Measurements of a Rooftop Air-Conditioner
 
-<img src="https://raw.github.com/ahjortland/psychroom/master/docs/RTU_AIRSIDE_SCHEMATIC.png" alt="RTU_AIR_SCHEMATIC" title="RTU Air-side Schematic" style="width: 500px;"/>
+<img src="https://raw.github.com/ahjortland/psychroom/master/docs/RTU_AIR_SCHEMATIC.png" alt="RTU_AIR_SCHEMATIC" title="RTU Air-side Schematic" style="width: 500px;"/>
 
 <TABLE>
 <CAPTION><EM>Name and labels of air-side sensors installed on RTU

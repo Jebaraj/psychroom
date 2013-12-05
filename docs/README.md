@@ -213,19 +213,70 @@ measurement device.  A list of acceptable fluid identifiers is shown below.
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
-    <TR><TH>Identifier</TH><TH>Description</TH></TR>
+    <TR>
+        <TH>Identifier</TH>
+        <TH>Description</TH>
+        <TH>Example</TH>
+    </TR>
 <TBODY>
-    <TR><TD>air<TD>air</TR>
-    <TR><TD>elec<TD>electric</TR>
-    <TR><TD>gas<TD>natural gas</TR>
-    <TR><TD>brn<TD>brine</TR>
-    <TR><TD>h2o<TD>water</TR>
-    <TR><TD>oil<TD>oil</TR>
-    <TR><TD>ref<TD>refrigerant</TR>
-    <TR><TD>rich<TD>rich solution</TR>
-    <TR><TD>weak<TD>weak solution</TR>
-    <TR><TD>mech<TD>mechanical, e.g. shaft or belt; what exactly needs to be clear from schematic</TR>
+    <TR>
+        <TD>air
+        <TD>air
+        <TD>ahu_air_mix_T is the air handling unit mixed-air temperature
+    </TR>
+    <TR>
+        <TD>elec
+        <TD>electric
+        <TD>comp_elec_ctrl_pwr is the compressor controller electric power
+    </TR>
+    <TR>
+        <TD>ngas
+        <TD>natural gas
+        <TD>htr_ngas_in_mdot is the heater natural gas inlet mass flow rate
+    </TR>
+    <TR>
+        <TD>brn
+        <TD>brine
+        <TD>ithx_brn_out_T is the internal heat exchanger brine outlet
+        temperature
+    </TR>
+    <TR>
+        <TD>h2o
+        <TD>water
+        <TD>ithx_h2o_in_mdot is the internal heat exchanger water inlet mass
+        flow rate
+    </TR>
+    <TR>
+        <TD>oil
+        <TD>oil
+        <TD>sep_oil_out_T is the oil outlet temperature of the separator
+    </TR>
+    <TR>
+        <TD>ref
+        <TD>refrigerant
+        <TD>odhx_ref_out_pg is the outdoor heat exchanger refrigerant outlet
+        gauge pressure
+    </TR>
+    <TR>
+        <TD>rich
+        <TD>rich solution
+        <TD>absr_rich_out_T is the outlet temperature of the rich solution in
+        the absorber
+    </TR>
+    <TR>
+        <TD>weak
+        <TD>weak solution
+        <TD>rect_weak_out_mdot is the outlet mass flow rate of the weak solution
+        in the rectifier
+    </TR>
+    <TR>
+        <TD>mech
+        <TD>mechanical, e.g. shaft or belt; what exactly needs to be
+        clear from schematic
+        <TD>
+    </TR>
 </TABLE>
+
 
 ### Location Label Identifier
 
@@ -369,6 +420,7 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
         atmosphere and the interior of the nozzle box
     </TR>
 </TABLE>
+
 
 ### Measurement Type Label Identifier
 
@@ -515,9 +567,11 @@ below.
     </TR>
 </TABLE>
     
+
 ### Example Systems
 
 Here is a list of systems with their sensors labeled as examples.
+
 
 #### Refrigerant circuit of a ductless split heat pump system
 
@@ -662,7 +716,9 @@ The labeling of the sensors is listed as follows.
     </TR>
 </TABLE>
 
+
 ## Measurement Data Output File Format
+
 
 ### File Header Information
 

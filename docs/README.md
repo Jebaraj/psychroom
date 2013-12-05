@@ -59,35 +59,147 @@ identifiers is shown below.
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
-    <TR><TH>Identifier</TH><TH>Description</TH></TR>
+    <TR>
+        <TH>Identifier</TH>
+        <TH>Description</TH>
+        <TH>Example</TH>
+    </TR>
 <TBODY>
-    <TR><TD>absr<TD>absorber</TR>
-    <TR><TD>accm<TD>accumulator</TR>
-    <TR><TD>ahu<TD>air handling unit</TR>
-    <TR><TD>amb<TD>ambient</TR>
-    <TR><TD>comp<TD>compressor</TR>
-    <TR><TD>damp<TD>damper</TR>
-    <TR><TD>desr<TD>desorber</TR>
-    <TR><TD>eng<TD>engine/TR>
-    <TR><TD>ehr<TD>electric heater</TR>
-    <TR><TD>ejr<TD>ejector/injector</TR>
-    <TR><TD>fan<TD>fan</TR>
-    <TR><TD>filt<TD>filter</TR>
-    <TR><TD>idhx<TD>indoor heat exchanger</TR>
-    <TR><TD>ithx<TD>internal heat exchanger</TR>
-    <TR><TD>mflr<TD>muffler</TR>
-    <TR><TD>mot<TD>motor</TR>
-    <TR><TD>noz<TD>nozzle box</TR>
-    <TR><TD>odhx<TD>outdoor heat exchanger</TR>
-    <TR><TD>pump<TD>pump</TR>
-    <TR><TD>rect<TD>rectifier</TR>
-    <TR><TD>recv<TD>receiver</TR>
-    <TR><TD>sep<TD>separator</TR>
-    <TR><TD>od<TD>outdoor</TR>
-    <TR><TD>valv<TD>valve</TR>
-    <TR><TD>rvalv<TD>reversing valve</TR>
-    <TR><TD>vsd<TD>variable speed/frequency drive</TR>
-    <TR><TD>xd<TD>expansion device</TR>
+    <TR>
+        <TD>absr
+        <TD>absorber
+        <TD>
+    </TR>
+    <TR>
+        <TD>accm
+        <TD>accumulator
+        <TD>
+    </TR>
+    <TR>
+        <TD>ahu
+        <TD>air handling unit
+        <TD>
+    </TR>
+    <TR>
+        <TD>amb
+        <TD>ambient
+        <TD>
+    </TR>
+    <TR>
+        <TD>comp
+        <TD>compressor
+        <TD>
+    </TR>
+    <TR>
+        <TD>damp
+        <TD>damper
+        <TD>
+    </TR>
+    <TR>
+        <TD>desr
+        <TD>desorber
+        <TD>
+    </TR>
+    <TR>
+        <TD>eng
+        <TD>engine
+        <TD>
+    </TR>
+    <TR>
+        <TD>ehr
+        <TD>electric heater
+        <TD>
+    </TR>
+    <TR>
+        <TD>ejr
+        <TD>ejector/injector
+        <TD>
+    </TR>
+    <TR>
+        <TD>fan
+        <TD>fan
+        <TD>
+    </TR>
+    <TR>
+        <TD>filt
+        <TD>filter
+        <TD>
+    </TR>
+    <TR>
+        <TD>idhx
+        <TD>indoor heat exchanger
+        <TD>
+    </TR>
+    <TR>
+        <TD>ithx
+        <TD>internal heat exchanger
+        <TD>
+    </TR>
+    <TR>
+        <TD>mflr
+        <TD>muffler
+        <TD>
+    </TR>
+    <TR>
+        <TD>mot
+        <TD>motor
+        <TD>
+    </TR>
+    <TR>
+        <TD>noz
+        <TD>nozzle box
+        <TD>
+    </TR>
+    <TR>
+        <TD>odhx
+        <TD>outdoor heat exchanger
+        <TD>
+    </TR>
+    <TR>
+        <TD>pump
+        <TD>pump
+        <TD>
+    </TR>
+    <TR>
+        <TD>rect
+        <TD>rectifier
+        <TD>
+    </TR>
+    <TR>
+        <TD>recv
+        <TD>receiver
+        <TD>
+    </TR>
+    <TR>
+        <TD>sep
+        <TD>separator
+        <TD>
+    </TR>
+    <TR>
+        <TD>od
+        <TD>outdoor
+        <TD>
+    </TR>
+    <TR>
+        <TD>valv
+        <TD>valve
+        <TD>
+    </TR>
+    <TR>
+        <TD>rvalv
+        <TD>reversing valve
+        <TD>
+    </TR>
+    <TR>
+        <TD>vsd
+        <TD>variable speed/frequency drive
+        <TD>
+    </TR>
+    <TR>
+        <TD>xd
+        <TD>expansion device
+        <TD>
+    </TR>
 </TABLE>
 
 
@@ -125,44 +237,137 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
-    <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
+    <TR>
+        <TH>Identifier</TH>
+        <TH>Description</TH>
+        <TH>Explanation</TH>
+        <TH>Example</TH>
+    </TR>
 <TBODY>
     <TR>
-        <TD>crct<TD>circuit
+        <TD>crct
+        <TD>circuit
         <TD>Anywhere between the main inlet and outlet of heat exchangers
         <TD>odhx_ref_crct1_T is the temperature at a location marked as #1 
         within the refrigerant circuit of the outdoor heat exchanger
     </TR>
     <TR>
-        <TD>ctrl<TD>controller
+        <TD>ctrl
+        <TD>controller
         <TD>Controller of a component
         <TD>fan_elec_ctrl_pwr is the power consumption of the fan controller
     </TR>
     <TR>
-        <TD>dmp<TD>damper<TD>Damper of a component
+        <TD>dmp
+        <TD>damper
+        <TD>Damper of a component
         <TD>ahu_air_damp_pos is the opening position of the damper in 
-        the air handling unit<TD>
+        the air handling unit
     </TR>
-    <TR><TD>exh<TD>exhaust<TD>Exhaust from a component<TD> ahu_air_exh_T is the temperature at the exhaust of the air handling unit</TR>
-    <TR><TD>gasl<TD>gas line<TD>Gas line along the refrigerant circuit of a component<TD> odhx_ref_gasl_pg is the gage pressure at the exit towards the gas line of the system at the outdoor heat exchanger</TR>
-    <TR><TD>in<TD>inlet<TD>Inlet of a component<TD> ithx_brn_in_T is the inlet brine temperature of an internal heat exchanger</TR>
-    <TR><TD>int<TD>internal, interior<TD>Internal part of a component<TD> comp_ref_int1_pg is the gage pressure of the internal location #1 inside the compressor</TR>
-    <TR><TD>idr<TD>indoor<TD>A location in the indoor room around a component<TD> ahu_air_indr_B is the indoor room wet-bulb temperature around the air handling unit</TR>
-    <TR><TD>lvl<TD>level<TD><TD></TR>
     <TR>
-        <TD>liql<TD>liquid line
+        <TD>exh
+        <TD>exhaust
+        <TD>Exhaust from a component
+        <TD> ahu_air_exh_T is the temperature at the exhaust of the air handling
+        unit
+    </TR>
+    <TR>
+        <TD>gasl
+        <TD>gas line
+        <TD>Gas line along the refrigerant circuit of a component
+        <TD>odhx_ref_gasl_pg is the gage pressure at the exit towards the gas
+        line of the system at the outdoor heat exchanger
+    </TR>
+    <TR>
+        <TD>in
+        <TD>inlet
+        <TD>Inlet of a component
+        <TD>ithx_brn_in_T is the inlet brine temperature of an internal heat
+        exchanger
+    </TR>
+    <TR>
+        <TD>int
+        <TD>internal, interior
+        <TD>Internal part of a component
+        <TD> comp_ref_int1_pg is the gage pressure of the internal location #1
+        inside the compressor
+    </TR>
+    <TR>
+        <TD>idr
+        <TD>indoor
+        <TD>A location in the indoor room around a component
+        <TD> ahu_air_indr_B is the indoor room wet-bulb temperature around the
+        air handling unit
+    </TR>
+    <TR>
+        <TD>lvl
+        <TD>level
+        <TD>
+        <TD>
+    </TR>
+    <TR>
+        <TD>liql
+        <TD>liquid line
         <TD>Liquid line along the refrigerant circuit of a component
         <TD> odhx_ref_liql_pg is the gage pressure at the exit towards 
         the liquid line at the outdoor heat exchanger
     </TR>
-    <TR><TD>mix<TD>mixed<TD>Mixing chamber inside a component<TD> ahu_air_mix_D is the dewpoint at the mixing chamber inside the air handling unit</TR>
-    <TR><TD>odr<TD>outdoor<TD>A location around the outdoor room at a component<TD> comp_air_odr_T is the temperature around the compressor in the outdoor room</TR>
-    <TR><TD>out<TD>outlet<TD>Outlet of a component<TD>xd2_ref_out_pg is the gage pressure at the refrigerant outlet of expansion valve #2</TR>
-    <TR><TD>phas<TD>phase<TD>Phase of power supply to a component<TD>comp_elec_phas2_I is the current at the second phase of the electrical power supply to the compressor</TR>
-    <TR><TD>plnm<TD>plenum<TD>Plenum of a component<TD>idhx_air_plenum_D is the dewpoint at the plenum of the indoor unit heat exchanger</TR>
-    <TR><TD>ret<TD>return<TD>Return air duct of a component<TD>ahu_air_ret_B is the air wet-bulb temperature at the return air pipe of the air handling unit</TR>
-    <TR><TD>sply<TD>supply<TD>Supply air duct of a component<TD>ahu_air_sply_RH is the air relative humidity at the supply air pipe of the air handling unit</TR></TR>
-    <TR><TD>srnd<TD>surroundings<TD>Surroundings of the psychrometric chamber<TD> noz_air_srndInt_DeltaP is the air pressure difference between the atmosphere and the interior of the nozzle box</TR>
+    <TR>
+        <TD>mix
+        <TD>mixed
+        <TD>Mixing chamber inside a component
+        <TD> ahu_air_mix_D is the dewpoint at the mixing chamber inside the air
+        handling unit
+    </TR>
+    <TR>
+        <TD>odr
+        <TD>outdoor
+        <TD>A location around the outdoor room at a component
+        <TD> comp_air_odr_T is the temperature around the compressor in the
+        outdoor room
+    </TR>
+    <TR>
+        <TD>out
+        <TD>outlet
+        <TD>Outlet of a component
+        <TD>xd2_ref_out_pg is the gage pressure at the refrigerant outlet of
+        expansion valve #2
+    </TR>
+    <TR>
+        <TD>phas
+        <TD>phase
+        <TD>Phase of power supply to a component
+        <TD>comp_elec_phas2_I is the current at the second phase of the
+        electrical power supply to the compressor
+    </TR>
+    <TR>
+        <TD>plnm
+        <TD>plenum
+        <TD>Plenum of a component
+        <TD>idhx_air_plenum_D is the dewpoint at the plenum of the indoor unit
+        heat exchanger
+    </TR>
+    <TR>
+        <TD>ret
+        <TD>return
+        <TD>Return air duct of a component
+        <TD>ahu_air_ret_B is the air wet-bulb temperature at the return air pipe
+        of the air handling unit
+    </TR>
+    <TR>
+        <TD>sply
+        <TD>supply
+        <TD>Supply air duct of a component
+        <TD>ahu_air_sply_RH is the air relative humidity at the supply air pipe
+        of the air handling unit
+    </TR>
+    <TR>
+        <TD>srnd
+        <TD>surroundings
+        <TD>Surroundings of the psychrometric chamber
+        <TD> noz_air_srndInt_DeltaP is the air pressure difference between the
+        atmosphere and the interior of the nozzle box
+    </TR>
 </TABLE>
 
 ### Measurement Type Label Identifier
@@ -176,26 +381,37 @@ below.
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
-    <TR><TH>Identifier</TH><TH>Description</TH><TH>Explanation</TH><TH>Example</TH></TR>
+    <TR>
+        <TH>Identifier</TH>
+        <TH>Description</TH>
+        <TH>Explanation</TH>
+        <TH>Example</TH>
+    </TR>
 <TBODY>
     <TR>
-        <TD>B<TD>wet bulb<TD>Wet bulb for humid air.
+        <TD>B
+        <TD>wet bulb
+        <TD>Wet bulb for humid air.
         <TD>idhx_air_in_B is indoor air heat exchanger inlet wet bulb 
-	temperature.
+	    temperature.
     </TR>
     <TR>
-        <TD>D<TD>dew point<TD>Dewpoint for humid air/
+        <TD>D
+        <TD>dew point
+        <TD>Dewpoint for humid air/
         <TD>idhx_air_in_D is indoor air heat exchanger inlet dew point 
-	temperature.
+	    temperature.
     </TR>
     <TR>
-        <TD>duty<TD>PWM duty cycle
+        <TD>duty
+        <TD>PWM duty cycle
         <TD>Duty cycle for PWM (pulse-width-modulation) type signals.
         <TD>xd_ref_liql_PWM is the duty cycle of a pulse width modulated 
-	electronic expansion valve.
+	    electronic expansion valve.
     </TR>
     <TR>
-        <TD>freq<TD>frequency
+        <TD>freq
+        <TD>frequency
         <TD>Frequency of a component.
         <TD>vsd_elec_out_freq is the output frequency of a variable speed drive.
     </TR>
@@ -203,85 +419,85 @@ below.
         <TD>I
         <TD>current
         <TD>Electrical current.
-        <TD> vsd_elec_out_I is the output current of a variable speed drive 
-             and typically equivalent to comp_elec_in_I. 
+        <TD>vsd_elec_out_I is the output current of a variable speed drive 
+        and typically equivalent to comp_elec_in_I. 
     </TR>
     <TR>
         <TD>T
         <TD>temperature
         <TD>Temperature.
         <TD>comp_ref_out_T is the refrigerant temperature at the outlet of the 
-	compressor.
+	    compressor.
     </TR>
     <TR>
         <TD>mdot
         <TD>mass flow rate
         <TD>Mass flow rate.
         <TD>comp_ref_out_mdot is the refrigerant outlet flowrate and is 
-	different from comp_ref_in_mdot if vapor injected compression is used.
+	    different from comp_ref_in_mdot if vapor injected compression is used.
     </TR>
     <TR>
         <TD>pa
         <TD>absolute pressure
         <TD>Absolute pressure measurement.
         <TD>comp_ref_out_pa is the absolute refrigerant outlet pressure of the 
-	compressor if an absolute pressure transducer was used. 
+	    compressor if an absolute pressure transducer was used. 
     </TR>
     <TR>
         <TD>pag
         <TD>absolute pressure, based on gauge pressure measurement
         <TD>Gauge pressure measurement converted to absolute 
-	pressure at the time of measurement.
+	    pressure at the time of measurement.
         <TD>comp_ref_out_pag is the absolute refrigerant outlet pressure of the 
-	compressor if a gauge pressure transducer was used and the value is 
-	already containing the compensation for the ambient pressure.
+	    compressor if a gauge pressure transducer was used and the value is 
+	    already containing the compensation for the ambient pressure.
     </TR>
     <TR>
         <TD>pg
         <TD>gauge pressure
         <TD>Gauge pressure measurement.
         <TD> comp_ref_out_pg is the gauge refrigerant outlet pressure of the 
-	compressor if a gauge pressure transducer was used. 
+	    compressor if a gauge pressure transducer was used. 
     </TR>
     <TR>
         <TD>pos
         <TD>position
         <TD>Position of an adjustable component.
         <TD> ahu_air_damp_pos is the opening position of the damper in the air 
-	handling unit.
+	    handling unit.
     </TR>
     <TR>
         <TD>pwr
         <TD>power
         <TD>Electrical power.
         <TD>Comp_elec_in_power is the input power of the compressor. Note: do 
-	not use power for mechanical measurements, rather report RPM and torque.
+	    not use power for mechanical measurements, rather report RPM and torque.
     </TR>
     <TR>
         <TD>RH
         <TD>relative humidity
         <TD>Relative humidity of air.
         <TD>idhx_air_out_RH is the relative humidity of the air leaving the 
-	evaporator.
+	    evaporator.
     </TR>
     <TR>
         <TD>spd
         <TD>rotational speed
         <TD>Rotational speed of a component.
         <TD> comp_mech_int_speed is the rotational speed of the compressor and 
-	typically different from comp_elec_in_freq.
+	    typically different from comp_elec_in_freq.
     </TR>
     <TR>
         <TD>sw
         <TD>switch
         <TD>State of a switch.
         <TD>sep_oil_lvl_sw is the state of the liquid level switch in the oil 
-	separator.
+	    separator.
     </TR>
     <TR>
         <TD>u
         <TD>flow velocity
-	<TD>Flow velocity of a fluid.
+        <TD>Flow velocity of a fluid.
         <TD>idhx_air_in_u is the indoor heat exchanger inlet flow velocity.
     </TR>
     <TR>
@@ -295,7 +511,7 @@ below.
         <TD>volumetric flow rate
         <TD>Volumetric flow rate of a fluid
         <TD>noz_air_in_Vdot is the flow rate measured by the flow measurement
-	nozzle box.
+	    nozzle box.
     </TR>
 </TABLE>
     
@@ -305,42 +521,145 @@ Here is a list of systems with their sensors labeled as examples.
 
 #### Refrigerant circuit of a ductless split heat pump system
 
-Ductless split heat pump system is a split system which can provide heating or cooling to a building zone. It operates with a compressor, a reversing valve, an indoor heat exchanger, an electronic expansion valve, an outdoor heat exchanger and an accumulator. The indoor heat exchanger is housed inside the indoor unit while the other components are housed in the outdoor unit. The reversing valve controls the refrigerant flow to provide either heating or cooling to the building zone.
+Ductless split heat pump system is a split system which can provide heating or
+cooling to a building zone. It operates with a compressor, a reversing valve, an
+indoor heat exchanger, an electronic expansion valve, an outdoor heat exchanger
+and an accumulator. The indoor heat exchanger is housed inside the indoor unit
+while the other components are housed in the outdoor unit. The reversing valve
+controls the refrigerant flow to provide either heating or cooling to the
+building zone.
 
-In this example, an experiment was designed to measure the states of refrigerant between components and the refrigerant mass flow rate of the system. The schematic of the sensor location is given as follows.
+In this example, an experiment was designed to measure the states of refrigerant
+between components and the refrigerant mass flow rate of the system. The
+schematic of the sensor location is given as follows.
 
 <img src="https://raw.github.com/ahjortland/psychroom/master/docs/DHP.png" alt="DHP_ref_fig" title="DHP_ref_fig" style="width: 500px;"/>
 
-In the schematic, the indoor unit is named as ahu1 and the outdoor unit is named as ahu2. M stands for refrigerant mass flowmeter, T stands for immersion thermocouples, P stands for gage pressure transducers and W stands for a power transducer. The heat exchangers in the system are not labeled as condenser and evaporator because both heat exchangers can serve as a condenser or an evaporator. The power transducers are positioned next to the indoor unit and outdoor unit labels as they are measuring power consumption of the indoor units and outdoor units but not the power consumption of the individual components. The refrigerant on the right-handed side of the heat exchangers are always in vapor form and the pipes on that side are the gas line while other pipes are called the liquid line. The location of liquid line and gas line and the refrigerant flow direction are indicated in the legend in the diagram.
+In the schematic, the indoor unit is named as ahu1 and the outdoor unit is named
+as ahu2. M stands for refrigerant mass flowmeter, T stands for immersion
+thermocouples, P stands for gage pressure transducers and W stands for a power 
+transducer. The heat exchangers in the system are not labeled as condenser and
+evaporator because both heat exchangers can serve as a condenser or an
+evaporator. The power transducers are positioned next to the indoor unit and
+outdoor unit labels as they are measuring power consumption of the indoor units
+and outdoor units but not the power consumption of the individual components.
+The refrigerant on the right-handed side of the heat exchangers are always in
+vapor form and the pipes on that side are the gas line while other pipes are
+called the liquid line. The location of liquid line and gas line and the
+refrigerant flow direction are indicated in the legend in the diagram.
 
 The labeling of the sensors is listed as follows.
 
 <TABLE>
-<CAPTION><EM>Name and labels of sensors in the ductless split heat pump system</EM></CAPTION>
+<CAPTION><EM>Name and labels of sensors in the ductless split heat pump
+    system</EM></CAPTION>
 <COLGROUP align="center">
 <COLGROUP align="left">
 <THEAD valign="top">
-    <TR><TH>Sensor</TH><TH>Label</TH><TH>Explanation</TH></TR>
+    <TR>
+        <TH>Sensor</TH>
+        <TH>Label</TH>
+        <TH>Explanation</TH>
+    </TR>
 <TBODY>
-    <TR><TD>T at the compressor discharge<TD>comp_ref_out_T<TD></TR>
-    <TR><TD>T at the indoor heat exchanger gas line exit<TD>idhx_ref_gasl_T<TD></TR>
-    <TR><TD>T at the indoor heat exchanger liquid line exit<TD>idhx_ref_liql_T<TD></TR>
-    <TR><TD>T at the expansion valve liquid line exit<TD>xd_ref_liql_T<TD>Only one location refers to the expansion valve so no number is needed</TR>
-    <TR><TD>T at the outdoor heat exchanger liquid line exit<TD>odhx_ref_liql_T<TD></TR>
-    <TR><TD>T at the outdoor heat exchanger gas line exit<TD>odhx_ref_gasl_T<TD></TR>
-    <TR><TD>T at the accumulator inlet<TD>accm_ref_in_T<TD></TR>
-    <TR><TD>T at the compressor suction<TD>comp_ref_in_T<TD></TR>
-    <TR><TD>P at the compressor discharge<TD>comp_ref_out_pg<TD></TR>
-    <TR><TD>P at the indoor heat exchanger gas line exit<TD>idhx_ref_gasl_pg<TD></TR>
-    <TR><TD>P at the indoor heat exchanger liquid line exit<TD>idhx_ref_liql_pg<TD></TR>
-    <TR><TD>P at the expansion valve liquid line exit<TD>xd_ref_liql_pg<TD>Only one location refers to the expansion valve so no number is needed</TR>
-    <TR><TD>P at the outdoor heat exchanger liquid line exit<TD>odhx_ref_liql_pg<TD></TR>
-    <TR><TD>P at the outdoor heat exchanger gas line exit<TD>odhx_ref_gasl_pg<TD></TR>
-    <TR><TD>P at the accumulator inlet<TD>accm_ref_in_pg<TD></TR>
-    <TR><TD>P at the compressor suction<TD>comp_ref_in_pg<TD></TR>
-    <TR><TD>M at the indoor unit heat exchanger liquid line exit<TD>idhx_ref_liql_mdot<TD></TR>
-    <TR><TD>W at the indoor unit<TD>ahu1_elec_idr_pwr<TD>The indoor unit is labeled as ahu1 and idr means that the power transducer is positioned in the indoor room.</TR>
-    <TR><TD>W at the outdoor unit<TD>ahu2_elec_idr_pwr<TD>The outdoor unit is labeled as ahu2 and odr means that the power transducer is positioned in the indoor room.</TR>
+    <TR>
+        <TD>T at the compressor discharge
+        <TD>comp_ref_out_T
+        <TD>
+    </TR>
+    <TR>
+        <TD>T at the indoor heat exchanger gas line exit
+        <TD>idhx_ref_gasl_T
+        <TD>
+    </TR>
+    <TR>
+        <TD>T at the indoor heat exchanger liquid line exit
+        <TD>idhx_ref_liql_T
+        <TD>
+    </TR>
+    <TR>
+        <TD>T at the expansion valve liquid line exit
+        <TD>xd_ref_liql_T
+        <TD>Only one location refers to the expansion valve so no number is needed
+    </TR>
+    <TR>
+        <TD>T at the outdoor heat exchanger liquid line exit
+        <TD>odhx_ref_liql_T
+        <TD>
+    </TR>
+    <TR>
+        <TD>T at the outdoor heat exchanger gas line exit
+        <TD>odhx_ref_gasl_T
+        <TD>
+    </TR>
+    <TR>
+        <TD>T at the accumulator inlet
+        <TD>accm_ref_in_T
+        <TD>
+    </TR>
+    <TR>
+        <TD>T at the compressor suction
+        <TD>comp_ref_in_T
+        <TD>
+    </TR>
+    <TR>
+        <TD>P at the compressor discharge
+        <TD>comp_ref_out_pg
+        <TD>
+    </TR>
+    <TR>
+        <TD>P at the indoor heat exchanger gas line exit
+        <TD>idhx_ref_gasl_pg
+        <TD>
+    </TR>
+    <TR>
+        <TD>P at the indoor heat exchanger liquid line exit
+        <TD>idhx_ref_liql_pg
+        <TD>
+    </TR>
+    <TR>
+        <TD>P at the expansion valve liquid line exit
+        <TD>xd_ref_liql_pg
+        <TD>Only one location refers to the expansion valve so no number is
+        needed
+    </TR>
+    <TR>
+        <TD>P at the outdoor heat exchanger liquid line exit
+        <TD>odhx_ref_liql_pg
+        <TD>
+    </TR>
+    <TR>
+        <TD>P at the outdoor heat exchanger gas line exit
+        <TD>odhx_ref_gasl_pg
+        <TD>
+    </TR>
+    <TR>
+        <TD>P at the accumulator inlet
+        <TD>accm_ref_in_pg
+        <TD>
+    </TR>
+    <TR>
+        <TD>P at the compressor suction
+        <TD>comp_ref_in_pg
+        <TD>
+    </TR>
+    <TR>
+        <TD>M at the indoor unit heat exchanger liquid line exit
+        <TD>idhx_ref_liql_mdot
+        <TD>
+    </TR>
+    <TR>
+        <TD>W at the indoor unit
+        <TD>ahu1_elec_idr_pwr
+        <TD>The indoor unit is labeled as ahu1 and idr means that the power
+        transducer is positioned in the indoor room.
+    </TR>
+    <TR>
+        <TD>W at the outdoor unit
+        <TD>ahu2_elec_idr_pwr
+        <TD>The outdoor unit is labeled as ahu2 and odr means that the power
+        transducer is positioned in the indoor room.
+    </TR>
 </TABLE>
 
 ## Measurement Data Output File Format

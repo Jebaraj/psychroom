@@ -419,6 +419,12 @@ measurement is taken.  A list of acceptable location identifiers is shown below.
         <TD> noz_air_srndInt_DeltaP is the air pressure difference between the
         atmosphere and the interior of the nozzle box
     </TR>
+    <TR>
+        <TD>surf
+        <TD>surface
+        <TD>Surface of a component
+        <TD>comp_air_surf_T is the air-side compressor surface temperature
+    </TR>
 </TABLE>
 
 

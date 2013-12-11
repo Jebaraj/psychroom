@@ -234,10 +234,15 @@ measurement device.  A list of acceptable fluid identifiers is shown below.
         <TD>electric
         <TD>comp_elec_ctrl_pwr is the compressor controller electric power
     </TR>
-    <TR>
+        <TR>
         <TD>ngas
         <TD>natural gas
         <TD>htr_ngas_in_mdot is the heater natural gas inlet mass flow rate
+    </TR>
+    <TR>
+        <TD>gwm
+        <TD>glycol water mixture
+        <TD>mixtures of glycol and water. mixture ratio to be defined in fileheader
     </TR>
     <TR>
         <TD>brn

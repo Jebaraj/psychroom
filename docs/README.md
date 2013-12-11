@@ -186,6 +186,11 @@ identifiers is shown below.
         <TD>
     </TR>
     <TR>
+        <TD>odu
+        <TD>outdoor unit
+        <TD>outdoor unit
+    </TR>
+    <TR>
         <TD>valv
         <TD>valve
         <TD>

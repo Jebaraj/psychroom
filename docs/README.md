@@ -206,6 +206,11 @@ identifiers is shown below.
         <TD>
     </TR>
     <TR>
+        <TD>vapl
+        <TD>vavapor line
+        <TD>
+    </TR>
+    <TR>
         <TD>xd
         <TD>expansion device
         <TD>

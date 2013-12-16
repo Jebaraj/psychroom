@@ -136,6 +136,11 @@ identifiers is shown below.
         <TD>
     </TR>
     <TR>
+        <TD>liql
+        <TD>Liquid line
+        <TD>
+    </TR>
+    <TR>
         <TD>mflr
         <TD>muffler
         <TD>
@@ -181,6 +186,11 @@ identifiers is shown below.
         <TD>
     </TR>
     <TR>
+        <TD>odu
+        <TD>outdoor unit
+        <TD>outdoor unit
+    </TR>
+    <TR>
         <TD>valv
         <TD>valve
         <TD>
@@ -193,6 +203,11 @@ identifiers is shown below.
     <TR>
         <TD>vsd
         <TD>variable speed/frequency drive
+        <TD>
+    </TR>
+    <TR>
+        <TD>vapl
+        <TD>vavapor line
         <TD>
     </TR>
     <TR>
@@ -229,10 +244,15 @@ measurement device.  A list of acceptable fluid identifiers is shown below.
         <TD>electric
         <TD>comp_elec_ctrl_pwr is the compressor controller electric power
     </TR>
-    <TR>
+        <TR>
         <TD>ngas
         <TD>natural gas
         <TD>htr_ngas_in_mdot is the heater natural gas inlet mass flow rate
+    </TR>
+    <TR>
+        <TD>gwm
+        <TD>glycol water mixture
+        <TD>mixtures of glycol and water. mixture ratio to be defined in fileheader
     </TR>
     <TR>
         <TD>brn

@@ -6,7 +6,7 @@ from os.path import join
 
 import pandas as pd
 
-from sensor_utils import translate_keys
+from label_handler import translate_keys
 
 
 def load_(filepath, ext='.htf', **kwargs):

@@ -106,9 +106,16 @@ class UnitPrefix(object):
 
 class Unit(object):
 
-    """Measurement unit base class."""
+    """Measurement unit base class.
 
-    def __init__(self, val=None):
+    Parameters
+    ----------
+    new : str, optional
+        unit string name or symbol
+
+    """
+
+    def __init__(self, new=None):
         self._name = None
         self._symbol = None
         self._type = None
@@ -117,8 +124,8 @@ class Unit(object):
         self._to_base = None
         self._from_base = None
 
-        if val:
-            p_str, u_str = parse_unit_string(val)
+        if new:
+            p_str, u_str = parse_unit_string(new)
             self.prefix._lookup(p_str)
             self._lookup(u_str)
 
@@ -162,6 +169,32 @@ class Unit(object):
         _, lib = load_libraries()
 
         return lib
+
+    def to(self, new):
+        """Return function that convert unit to a new unit.
+
+        Paramters
+        ---------
+        new : Unit or str
+            new unit type or string
+
+        Returns
+        -------
+        result : func
+            function that converts a value in the current unit to
+            a value in the new unit
+
+        Examples
+        --------
+        >>> Unit('K').to(Unit('degC'))(273.15)
+        0.0
+
+        >>> Unit('pascal').to('bar')(1000.)
+        0.01
+
+        """
+
+        return convert(self, new)
 
     @property
     def name(self):

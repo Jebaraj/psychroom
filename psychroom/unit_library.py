@@ -15,11 +15,11 @@ def unit_library():
     """
 
     BASE_TO_BASE = lambda x: x
-    props = namedtuple('UnitProperty', ['symbol', 'type', 'name',
+    props = namedtuple('UnitProperty', ['symbol', 'quantity', 'name',
                                         'base', 'to_base', 'from_base'])
     library = {
         'kelvin': props(
-            type='temperature',
+            quantity='temperature',
             name='Kelvin',
             symbol='K',
             base='kelvin',
@@ -27,7 +27,7 @@ def unit_library():
             from_base=BASE_TO_BASE
         ),
         'degrees celsius': props(
-            type='temperature',
+            quantity='temperature',
             name='degrees Celsius',
             symbol=DEG_SYMBOL + 'C',
             base='kelvin',
@@ -35,7 +35,7 @@ def unit_library():
             from_base=lambda x: x - 273.15
         ),
         'degrees rankine': props(
-            type='temperature',
+            quantity='temperature',
             name='degrees Rankine',
             symbol=DEG_SYMBOL + 'R',
             base='kelvin',
@@ -43,7 +43,7 @@ def unit_library():
             from_base=lambda x: 1.8 * (x - 273.15) + 491.67
         ),
         'degrees fahrenheit': props(
-            type='temperature',
+            quantity='temperature',
             name='degrees Fahrenheit',
             symbol=DEG_SYMBOL + 'F',
             base='kelvin',
@@ -51,7 +51,7 @@ def unit_library():
             from_base=lambda x: 1.8 * x - 459.67
         ),
         'pascal': props(
-            type='pressure',
+            quantity='pressure',
             name='pascals',
             symbol='Pa',
             base='pascal',
@@ -59,7 +59,7 @@ def unit_library():
             from_base=BASE_TO_BASE
         ),
         'bar': props(
-            type='pressure',
+            quantity='pressure',
             name='bar',
             symbol='bar',
             base='pascal',
@@ -67,7 +67,7 @@ def unit_library():
             from_base=lambda x: x * 10 ** -5
         ),
         'standard atmosphere': props(
-            type='pressure',
+            quantity='pressure',
             name='standard atmosphere',
             symbol='atm',
             base='pascal',
@@ -75,7 +75,7 @@ def unit_library():
             from_base=lambda x: 0.98692 * x * 10 ** -5
         ),
         'pounds per square inch': props(
-            type='pressure',
+            quantity='pressure',
             name='pounds per square inch',
             symbol='psi',
             base='pascal',

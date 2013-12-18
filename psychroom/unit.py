@@ -118,7 +118,7 @@ class Unit(object):
     def __init__(self, new=None):
         self._name = None
         self._symbol = None
-        self._type = None
+        self._quantity = None
         self._base = None
         self._prefix = UnitPrefix()
         self._to_base = None
@@ -146,7 +146,7 @@ class Unit(object):
 
         u_lib = self._library()
         if val in u_lib:
-            self.type = u_lib[val].type
+            self.quantity = u_lib[val].quantity
             self.name = u_lib[val].name
             self.symbol = u_lib[val].symbol
             self.base = u_lib[val].base
@@ -155,7 +155,7 @@ class Unit(object):
         else:
             for key, info in u_lib.items():
                 if info.symbol == val:
-                    self.type = info.type
+                    self.quantity = info.quantity
                     self.name = info.name
                     self.symbol = info.symbol
                     self.base = info.base
@@ -221,13 +221,13 @@ class Unit(object):
             self._symbol = value
 
     @property
-    def type(self):
-        """The unit type property, i.e. temperature, pressure."""
-        return self._type
+    def quantity(self):
+        """The unit quantity property, i.e. temperature, pressure."""
+        return self._quantity
 
-    @type.setter
-    def type(self, value):
-        self._type = value
+    @quantity.setter
+    def quantity(self, value):
+        self._quantity = value
 
     @property
     def base(self):
@@ -255,7 +255,7 @@ class Unit(object):
     @to_base.setter
     def to_base(self, func):
         if self.prefix.magnitude:
-            if self.type == 'temperature':
+            if self.quantity == 'temperature':
                 self._to_base = lambda x: func(self.prefix.magnitude * x)
             else:
                 self._to_base = lambda x: self.prefix.magnitude * func(x)
@@ -270,7 +270,7 @@ class Unit(object):
     @from_base.setter
     def from_base(self, func):
         if self.prefix.magnitude:
-            if self.type == 'temperature':
+            if self.quantity == 'temperature':
                 self._from_base = lambda x: func(x / self.prefix.magnitude)
             else:
                 self._from_base = lambda x: func(x) / self.prefix.magnitude
@@ -279,7 +279,7 @@ class Unit(object):
 
     def __str__(self):
         props = OrderedDict(sorted({'Class': self.__class__,
-                                    'Type': self.type,
+                                    'quantity': self.quantity,
                                     'Name': self.name}.items()))
         result = ['{0}:\t{1}\n'.format(key, val) for key, val in props.items()]
 
@@ -376,7 +376,7 @@ def convert(old, new):
     try:
         # TODO This part gets buggy, for some reason I can't get it to
         # raise the exception when I want.
-        if old.type == new.type:
+        if old.quantity == new.quantity:
             to_base = old.to_base
             from_base = new.from_base
         else:

@@ -7,7 +7,24 @@ from unit_library import unit_library
 from util import DEG_SYMBOL
 
 
-class UnitPrefix(object):\
+class IncompatibleUnitsError(Exception):
+
+    """Exception raised for imcompatible units.
+
+    IncompatibleUnitsError is raised when operations betweeen
+    incompatible units are attempted.
+
+    Parameters
+    ----------
+    message : explanation of the error
+
+    """
+
+    def __init__(self, message):
+        self.message = message
+
+
+class UnitPrefix(object):
 
     "Measurement unit prefix base class."""
 
@@ -91,7 +108,7 @@ class Unit(object):
 
     """Measurement unit base class."""
 
-    def __init__(self, val):
+    def __init__(self, val=None):
         self._name = None
         self._symbol = None
         self._type = None
@@ -100,10 +117,10 @@ class Unit(object):
         self._to_base = None
         self._from_base = None
 
-        p_str, u_str = parse_unit_string(val)
-
-        self.prefix._lookup(p_str)
-        self._lookup(u_str)
+        if val:
+            p_str, u_str = parse_unit_string(val)
+            self.prefix._lookup(p_str)
+            self._lookup(u_str)
 
     def _lookup(self, val):
         """Look-up unit properties for a given unit value.
@@ -290,3 +307,57 @@ def parse_unit_string(raw):
     p_str = sorted(p_str)[-1]
 
     return p_str, u_str
+
+
+def convert(old, new):
+    """Make a function that converts from one unit to another unit.
+
+    Parameters
+    ----------
+    old : Unit or str
+        Unit class or str to convert from
+    new : Unit or str
+        Unit class or str to convert to
+
+    Returns
+    -------
+    old_to_new : func
+        function that whose input is a value in the old units and
+        returns a value in the new units
+
+    Examples
+    --------
+    >>> round(convert('degC', 'degF')(0))
+    32
+
+    >>> convert(Unit('K'), 'degC')(373.15)
+    100.0
+
+    >>> convert(Unit('Pa'), Unit('mPa'))(1.)
+    1000.0
+
+    """
+
+    # Use duck-typing and recursion get the arguments into the expected
+    # form.
+    try:
+        # TODO This part gets buggy, for some reason I can't get it to
+        # raise the exception when I want.
+        if old.type == new.type:
+            to_base = old.to_base
+            from_base = new.from_base
+        else:
+            msg = 'conversion between {0} and {1} not possible'
+            raise IncompatibleUnitsError(msg.format(old.symbol, new.symbol))
+    except AttributeError:
+        try:
+            return convert(Unit(old), Unit(new))
+        except:
+            try:
+                return convert(old, Unit(new))
+            except AttributeError:
+                return convert(Unit(old), new)
+            except IncompatibleUnitsError as err:
+                raise err
+
+    return lambda x: from_base(to_base(x))

@@ -1,7 +1,7 @@
 """Unit of measurements library."""
 from collections import namedtuple
 
-from utils import DEG_SYMBOL
+from util import DEG_SYMBOL
 
 
 def unit_library():
@@ -39,7 +39,7 @@ def unit_library():
             name='degrees Rankine',
             symbol=DEG_SYMBOL + 'R',
             base='kelvin',
-            to_base=lambda x: 5. / 9. * (x - 491.67) + 273.15,
+            to_base=lambda x: (x - 491.67) / 1.8 + 273.15,
             from_base=lambda x: 1.8 * (x - 273.15) + 491.67
         ),
         'degrees fahrenheit': props(
@@ -47,7 +47,7 @@ def unit_library():
             name='degrees Fahrenheit',
             symbol=DEG_SYMBOL + 'F',
             base='kelvin',
-            to_base=lambda x: 5. / 9. * (x + 459.67),
+            to_base=lambda x: (x + 459.67) / 1.8,
             from_base=lambda x: 1.8 * x - 459.67
         ),
         'pascal': props(

@@ -7,6 +7,7 @@ from os.path import join
 import pandas as pd
 
 from label_handler import translate_keys
+from unit import Unit
 
 
 def load_(filepath, ext='.htf', **kwargs):
@@ -156,7 +157,7 @@ def parse_raw_data(handle, **kwargs):
     # TODO It would be cool if key-unit pairs were methods that updated
     # with each call.
     for key, unit in zip(result.keys(), column_units):
-        result[key].unit = unit
+        result[key].unit = Unit(unit)
     result.units = {key: result[key].unit for key in result.keys()}
 
     result = translate_keys(result, result.keys())

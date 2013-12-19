@@ -129,6 +129,12 @@ class Unit(object):
             self.prefix._lookup(p_str)
             self._lookup(u_str)
 
+    def __format__(self, spec=None):
+        if not spec:
+            return str(self.symbol)
+        else:
+            pass
+
     def _lookup(self, val):
         """Look-up unit properties for a given unit value.
 

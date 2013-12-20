@@ -28,7 +28,7 @@ def load_(filepath, ext='.htf', **kwargs):
 
     for root, _, files in os.walk(filepath):
         data = {
-            cleanse_names([f]).pop(): read_(join(root, f), **kwargs)
+            cleanse_names(f): read_(join(root, f), **kwargs)
             for f in filter(is_ext, sorted(files))
         }
 
@@ -96,11 +96,11 @@ def parse_metadata(handle):
         if line.startswith('[raw data]'):
             return metadata
         elif line.startswith('[') and line.endswith(']'):
-            section = cleanse_names([line.strip().strip('[]')]).pop()
+            section = cleanse_names(line.strip().strip('[]'))
             metadata[section] = {}
         else:
             key, info = [item.strip() for item in line.split('=')]
-            key = cleanse_names([key]).pop()
+            key = cleanse_names(key)
             value, unit = parse_metadata_info(info)
             metadata[section][key] = MetadataInfo(*parse_metadata_info(info))
 
@@ -170,9 +170,10 @@ def cleanse_names(names, bad_chars=[], repl='_'):
 
     Parameters
     ----------
-    names : [string]
-        A list of proposed DataFrame column name strings usually read
-        from test data file raw data header or metadata information.
+    names : string or [string]
+        A string or list of proposed DataFrame column name strings
+        usually read from test data file raw data header or metadata
+        information.
     bad_chars : [string]
         List of invalid or bad characters that should be replaced from
         name strings if present
@@ -181,8 +182,8 @@ def cleanse_names(names, bad_chars=[], repl='_'):
 
     Returns
     -------
-    result : [string]
-        List of cleansed DataFrame column names.
+    result : string or [string]
+        String or list of cleansed DataFrame column names.
 
     Examples
     >>> cleanse_names(['a b c d', 'e_f g_i', 'j_k'])
@@ -191,14 +192,25 @@ def cleanse_names(names, bad_chars=[], repl='_'):
     >>> cleanse_names(['1abc0'], repl='_')
     ['_abc0']
 
+    >>> cleanse_names(' xxx')
+    '_xxx'
+
+    >>> cleanse_names('abcdef')
+    'abcdef'
+
     """
 
-    clean = lambda x, y: x + y if (x + y).isidentifier() else x + '_'
+    clean = lambda x, y: x + y if (x + y).isidentifier() else x + repl
 
-    result = [''] * len(names)
-    for ind, name in enumerate(names):
-        for char in name:
-            result[ind] = clean(result[ind], char)
+    result = ''
+    if isinstance(names, str):
+        for char in names:
+            result = clean(result, char)
+    else:
+        result = [result] * len(names)
+        for ind, name in enumerate(names):
+            for char in name:
+                result[ind] = clean(result[ind], char)
 
     return result
 

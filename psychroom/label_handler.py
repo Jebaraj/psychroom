@@ -1,7 +1,13 @@
 """Utility functions used for working with sensor measurment data."""
 
-from configparser import SafeConfigParser
 from os import path
+
+from compat import PY3
+
+if PY3:
+    from configparser import SafeConfigParser
+else:
+    from ConfigParser import SafeConfigParser
 
 
 def load_library(filepath):
@@ -69,9 +75,9 @@ def translate_label(label, library=None, sep='_'):
 
     SECTIONS = ('components', 'fluids', 'locations', 'measurement types')
 
-    description = ' '.join(
-        [library[sec][abrv] for sec, abrv in zip(SECTIONS, label.split(sep))]
-    )
+    description = ' '.join([
+        library.get(sec, abrv) for sec, abrv in zip(SECTIONS, label.split(sep))
+    ])
 
     return description
 

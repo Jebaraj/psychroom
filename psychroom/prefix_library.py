@@ -1,5 +1,8 @@
+# -*- coding: latin-1 -*-
 """Unit of measurements prefixes library."""
 from collections import namedtuple
+
+from util import MICRO_SYMBOL
 
 
 def prefix_library():
@@ -30,7 +33,7 @@ def prefix_library():
         'deci': info(symbol='d', magnitude=10 ** -1),
         'centi': info(symbol='c', magnitude=10 ** -2),
         'milli': info(symbol='m', magnitude=10 ** -3),
-        'micro': info(symbol='µ', magnitude=10 ** -6),
+        'micro': info(symbol=MICRO_SYMBOL, magnitude=10 ** -6),
         'nano': info(symbol='n', magnitude=10 ** -9),
         'pico': info(symbol='p', magnitude=10 ** -12),
         'femto': info(symbol='f', magnitude=10 ** -15),

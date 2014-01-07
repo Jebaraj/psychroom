@@ -1,6 +1,6 @@
 """Unit base class, subclasses and associated methods."""
 
-from collections import OrderedDict
+# from collections import OrderedDict
 
 from prefix_library import prefix_library
 from unit_library import unit_library
@@ -134,6 +134,13 @@ class Unit(object):
             return str(self.symbol)
         else:
             pass
+
+    def __repr__(self):
+        return str(self)
+
+    def __str__(self):
+        args = self.quantity.title(), self.name, self.symbol
+        return '{0} Unit: {1} [{2}]'.format(*args)
 
     def _lookup(self, val):
         """Look-up unit properties for a given unit value.
@@ -283,14 +290,6 @@ class Unit(object):
         else:
             self._from_base = func
 
-    def __str__(self):
-        props = OrderedDict(sorted({'Class': self.__class__,
-                                    'quantity': self.quantity,
-                                    'Name': self.name}.items()))
-        result = ['{0}:\t{1}\n'.format(key, val) for key, val in props.items()]
-
-        return ''.join(result)
-
 
 def load_libraries():
     """Load the units and prefixes libraries.
@@ -327,8 +326,13 @@ def parse_unit_string(raw):
     p_lib, u_lib = load_libraries()
 
     raw = raw.replace('deg', DEG_SYMBOL, 1)
-    u_str = [k for k in u_lib if raw.endswith(str(k))] or \
-        [i.symbol for k, i in u_lib.items() if raw.endswith(str(i.symbol))]
+    try:
+        u_str = [k for k in u_lib if raw.endswith(str(k))] or \
+            [i.symbol for k, i in u_lib.items() if raw.endswith(str(i.symbol))]
+    except UnicodeEncodeError:
+        u_str = [k for k in u_lib if raw.endswith(k)] or \
+            [i.symbol for k, i in u_lib.items() if raw.endswith(i.symbol)]
+        import pdb; pdb.set_trace()
     if not u_str:
         raise Exception('Unrecognized unit string {}'.format(raw))
 
@@ -400,3 +404,25 @@ def convert(old, new):
                 raise err
 
     return lambda x: from_base(to_base(x))
+
+
+def parse_unit_name(input_string):
+    """Parse string representation of a unit."""
+
+    # for suffix, prefix in itertools.product(prefixes, suffixes):
+    #     if unit_name.startswith(prefix) and unit_name.endswith(suffix):
+    #         name = unit_name[len(prefix):]
+    #         if suffix:
+    #             name = name[:-len(suffix)]
+    #         if name in units:
+
+    # Find division symbols or strings.
+    division_strings = ('per', '/', )
+    for division in filter(lambda x: x in input_string, division_strings):
+        head, tail = [
+            item.strip() for item in input_string.split(division, maxsplit=1)
+        ]
+
+    result = head, tail
+
+    return result

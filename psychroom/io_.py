@@ -8,6 +8,7 @@ import pandas as pd
 
 from label_handler import translate_keys
 from unit import Unit
+from compat import (casefold, filter, isdecimal, isidentifier)
 
 
 def load_(filepath, ext='.htf', **kwargs):
@@ -21,6 +22,9 @@ def load_(filepath, ext='.htf', **kwargs):
     Returns
     -------
     data : {pandas DataFrame}
+        dictionary of all the data in each test file as data frames
+    summary : pandas DataFrame
+        a summary data frame of the data from all the test files
 
     """
 
@@ -91,8 +95,8 @@ def parse_metadata(handle):
     MetadataInfo = namedtuple('MetadataInfo', ['value', 'unit'])
 
     metadata = {}
-    for line in handle:
-        line = line.strip()
+    while True:
+        line = handle.readline().strip()
         if line.startswith('[raw data]'):
             return metadata
         elif line.startswith('[') and line.endswith(']'):
@@ -125,11 +129,11 @@ def parse_metadata_info(info):
     # Also, I think there is many oppurtunities for Exceptions, should
     # make this more robust.
     if unit:
-        if unit.casefold() == 'bool':
-            value = True if value.casefold() == 'true' else False
+        if casefold(unit) == 'bool':
+            value = True if casefold(value) == 'true' else False
         elif value.isdigit():
             value = int(value)
-        elif value.replace('.', '').isdecimal():
+        elif isdecimal(value.replace('.', '')):
             value = float(value)
 
     return value, unit
@@ -200,7 +204,7 @@ def cleanse_names(names, bad_chars=[], repl='_'):
 
     """
 
-    clean = lambda x, y: x + y if (x + y).isidentifier() else x + repl
+    clean = lambda x, y: x + y if isidentifier(x + y) else x + repl
 
     result = ''
     if isinstance(names, str):
@@ -243,14 +247,6 @@ def append_metadata(data, metadata):
     return data
 
 
-def collapse_metadata(data, metadata):
-    """Return DataFrame with metadata concatenated to columns."""
-
-    for key, info in metadata.items():
-        if key in data.keys():
-            data[key][id_], data[key].unit = info
-        else:
-            data[key] = info.value
-            data[key].unit = info.unit
-
-    return data
+def get_units(frame):
+    return {key: frame[key].unit if hasattr(frame[key], 'unit')
+            else Unit() for key in frame.keys()}

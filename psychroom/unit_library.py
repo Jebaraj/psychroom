@@ -84,6 +84,18 @@ def unit_library():
         ),
     }
 
+    # Dimensionless Units
+    dimensionless = {
+        'dimensionless': props(
+            quantity='dimensionless',
+            name='-',
+            symbol='-',
+            base='-',
+            to_base=BASE_TO_BASE,
+            from_base=BASE_TO_BASE
+        ),
+    }
+
     # Units of Length
     length = {
         'meter': props(
@@ -234,6 +246,7 @@ def unit_library():
 
     library = dict(
         list(library.items()) +
+        list(dimensionless.items()) +
         list(length.items()) +
         list(mass.items()) +
         list(time.items()) +

@@ -32,13 +32,15 @@ def load_(filepath, ext='.htf', **kwargs):
 
     for root, _, files in os.walk(filepath):
         data = {
-            cleanse_names(f): read_(join(root, f), **kwargs)
-            for f in filter(is_ext, sorted(files))
+            ind: read_(join(root, f), **kwargs)
+            for ind, f in enumerate(filter(is_ext, sorted(files)))
         }
 
     summary = pd.DataFrame(
         data={name: item.mean() for name, item in data.items()}
     ).T
+    for key in summary.keys():
+        summary[key].unit = data[0][key].unit
     for id_, _ in summary.iterrows():
         for section, metadata in data[id_].metadata.items():
             for key, info in metadata.items():
@@ -134,6 +136,7 @@ def parse_metadata_info(info):
         elif value.isdigit():
             value = int(value)
         elif isdecimal(value.replace('.', '')):
+            unit = Unit(unit)
             value = float(value)
 
     return value, unit
